@@ -1,6 +1,8 @@
 
 import 'package:currency_converter/core/network/api_service.dart';
 
+import '../../domain/entity/currencies_entity.dart';
+
 abstract class HomeRemoteDataSource {
   Future<List<String>> fetchAllCurrencies();
 }
@@ -19,9 +21,9 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   }
 
   List<String> getCurrencies(response) {
-    List<String> currencies = [];
-    currencies = response['results'].keys;
-    return currencies;
+    CurrenciesEntity currencies = CurrenciesEntity();
+   currencies.currencyNames = response['results'].keys;
+    return currencies.currencyNames ?? [];
   }
 
 }
