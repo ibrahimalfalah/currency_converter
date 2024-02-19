@@ -10,8 +10,8 @@ void main() async{
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
-  setupHive();
-  setupGetIt();
+  await setupHive();
+  await setupGetIt();
   runApp(CurrencyConverter(appRouter: AppRouter()));
 }
 

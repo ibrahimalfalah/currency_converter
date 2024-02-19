@@ -4,6 +4,6 @@ part of 'home_bloc.dart';
 class HomeState<T> with _$HomeState {
   const factory HomeState.initial() = _Initial;
   const factory HomeState.loadingGetCurrencies() = LoadingGetCurrencies;
-  const factory HomeState.successGetCurrencies(List<String> currencies) = SuccessGetCurrencies;
+  const factory HomeState.successGetCurrencies(T currencies) = SuccessGetCurrencies<T>;
   const factory HomeState.errorGetCurrencies({required String error}) = ErrorGetCurrencies;
 }

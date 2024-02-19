@@ -22,13 +22,18 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   }
 
   void saveData(List<String> currencies,String boxName) {
-    var box = Hive.box(boxName);
+    var box = Hive.box<String>(boxName);
     box.addAll(currencies);
   }
 
   List<String> getCurrencies(response) {
     CurrenciesEntity currencies = CurrenciesEntity();
-   currencies.currencyNames = response['results'].keys;
+   //currencies.currencyNames = response['results'].keys;
+    // Assuming response['results'].keys is of type _CompactIterable<String>
+    final Iterable<String> keysIterable = response['results'].keys;
+    final List<String> keysList = keysIterable.toList();
+
+    currencies.currencyNames = keysList;
     return currencies.currencyNames ?? [];
   }
 

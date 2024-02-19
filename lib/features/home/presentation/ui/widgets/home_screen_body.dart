@@ -1,10 +1,12 @@
 import 'package:currency_converter/core/helpers/app_image.dart';
 import 'package:currency_converter/core/helpers/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/helpers/app_color.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/helpers/styles.dart';
+import '../../logic/home_bloc.dart';
 import 'custom_drop_down.dart';
 import 'custom_text_form_field.dart';
 
@@ -13,6 +15,7 @@ class HomeScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context.read<HomeBloc>().add(const GetCurrenciesEvent());
     return Padding(
       padding: EdgeInsets.only(
         top: 16.0.h,

@@ -283,7 +283,7 @@ mixin _$HomeState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(T currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
   }) =>
       throw _privateConstructorUsedError;
@@ -291,7 +291,7 @@ mixin _$HomeState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(T currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
   }) =>
       throw _privateConstructorUsedError;
@@ -299,7 +299,7 @@ mixin _$HomeState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(T currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     required TResult orElse(),
   }) =>
@@ -391,7 +391,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(T currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
   }) {
     return initial();
@@ -402,7 +402,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(T currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
   }) {
     return initial?.call();
@@ -413,7 +413,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(T currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     required TResult orElse(),
   }) {
@@ -509,7 +509,7 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(T currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
   }) {
     return loadingGetCurrencies();
@@ -520,7 +520,7 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(T currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
   }) {
     return loadingGetCurrencies?.call();
@@ -531,7 +531,7 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(T currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     required TResult orElse(),
   }) {
@@ -592,7 +592,7 @@ abstract class _$$SuccessGetCurrenciesImplCopyWith<T, $Res> {
           $Res Function(_$SuccessGetCurrenciesImpl<T>) then) =
       __$$SuccessGetCurrenciesImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({List<String> currencies});
+  $Res call({T currencies});
 }
 
 /// @nodoc
@@ -606,13 +606,13 @@ class __$$SuccessGetCurrenciesImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? currencies = null,
+    Object? currencies = freezed,
   }) {
     return _then(_$SuccessGetCurrenciesImpl<T>(
-      null == currencies
-          ? _value._currencies
+      freezed == currencies
+          ? _value.currencies
           : currencies // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as T,
     ));
   }
 }
@@ -620,16 +620,10 @@ class __$$SuccessGetCurrenciesImplCopyWithImpl<T, $Res>
 /// @nodoc
 
 class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
-  const _$SuccessGetCurrenciesImpl(final List<String> currencies)
-      : _currencies = currencies;
+  const _$SuccessGetCurrenciesImpl(this.currencies);
 
-  final List<String> _currencies;
   @override
-  List<String> get currencies {
-    if (_currencies is EqualUnmodifiableListView) return _currencies;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_currencies);
-  }
+  final T currencies;
 
   @override
   String toString() {
@@ -642,12 +636,12 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
         (other.runtimeType == runtimeType &&
             other is _$SuccessGetCurrenciesImpl<T> &&
             const DeepCollectionEquality()
-                .equals(other._currencies, _currencies));
+                .equals(other.currencies, currencies));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_currencies));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(currencies));
 
   @JsonKey(ignore: true)
   @override
@@ -661,7 +655,7 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(T currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
   }) {
     return successGetCurrencies(currencies);
@@ -672,7 +666,7 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(T currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
   }) {
     return successGetCurrencies?.call(currencies);
@@ -683,7 +677,7 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(T currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     required TResult orElse(),
   }) {
@@ -734,10 +728,10 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
 }
 
 abstract class SuccessGetCurrencies<T> implements HomeState<T> {
-  const factory SuccessGetCurrencies(final List<String> currencies) =
+  const factory SuccessGetCurrencies(final T currencies) =
       _$SuccessGetCurrenciesImpl<T>;
 
-  List<String> get currencies;
+  T get currencies;
   @JsonKey(ignore: true)
   _$$SuccessGetCurrenciesImplCopyWith<T, _$SuccessGetCurrenciesImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
@@ -810,7 +804,7 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(T currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
   }) {
     return errorGetCurrencies(error);
@@ -821,7 +815,7 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(T currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
   }) {
     return errorGetCurrencies?.call(error);
@@ -832,7 +826,7 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(T currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     required TResult orElse(),
   }) {

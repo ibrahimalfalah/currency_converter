@@ -6,5 +6,5 @@ Future<void> setupHive() async {
   /// Register Hive And Open The Box
   await Hive.initFlutter();
   Hive.registerAdapter(CurrenciesEntityAdapter());
-  await Hive.openBox(kCurrenciesBox);
+  await Hive.openBox<String>(kCurrenciesBox);
 }
