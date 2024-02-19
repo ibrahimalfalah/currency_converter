@@ -1,5 +1,7 @@
 
+import 'package:currency_converter/core/helpers/constants.dart';
 import 'package:currency_converter/core/network/api_service.dart';
+import 'package:hive/hive.dart';
 
 import '../../domain/entity/currencies_entity.dart';
 
@@ -17,7 +19,13 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   Future<List<String>> fetchAllCurrencies() async {
     final response = await _apiService.getAllCurrencies();
     List<String> currencies = getCurrencies(response);
+    saveData(currencies,kCurrenciesBox);
     return currencies;
+  }
+
+  void saveData(List<String> currencies,String boxName) {
+    var box = Hive.box(boxName);
+    box.addAll(currencies);
   }
 
   List<String> getCurrencies(response) {
