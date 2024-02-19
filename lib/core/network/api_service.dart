@@ -8,4 +8,7 @@ part 'api_service.g.dart';
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
+  @GET(ApiConstants.getAllCurrencies)
+  Future getAllCurrencies();
+
 }

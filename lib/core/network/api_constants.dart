@@ -1,8 +1,10 @@
 class ApiConstants {
-  static const String apiBaseUrl = "https://rxsina.wave-lite.co.uk/";
+  static const String apiBaseUrl = "https://free.currconv.com/";
+  static const String apiKey = "pr_c885b2ad9fd14be7aff2c690ef001c72";
 
-  static const String login = "mobile/AuthenticationMobile/MobileLogin";
-  static const String register = "mobile/ClientMobile/CreateClient";
+  static const String getAllCurrencies = "api/v7/currencies?apiKey=$apiKey";
+  static const String convertCurrencies = "api/v7/convert?q=USD_PHP,PHP_USD&compact=ultra&apiKey=$apiKey";
+  static const String historyCurrencies = "api/v7/convert?q=USD_PHP,PHP_USD&compact=ultra&date=[yyyy-mm-dd]&endDate=[yyyy-mm-dd]&apiKey=$apiKey";
 
 }
 
