@@ -11,6 +11,7 @@ import 'custom_cached_network_image.dart';
 import 'custom_drop_down.dart';
 import 'custom_text_form_field.dart';
 import 'drop_down_item_builder.dart';
+import 'home_bloc_listener.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
@@ -26,162 +27,197 @@ class HomeScreenBody extends StatelessWidget {
         right: 8.0.h,
       ),
       child: SingleChildScrollView(
-        child: Column(
-          children: [
-            Image.asset(
-              AppImage.logo,
-              fit: BoxFit.cover,
-              width: MediaQuery.of(context).size.width * 0.5,
-            ),
-            const VerticalSpace(32),
-            CustomTextFormField(
-              labelText: 'Enter Value Of Currency',
-              onChanged: (value) {},
-              validator: (value) {
-                return null;
-              },
-              keyboardType: TextInputType.number,
-              controller: bloc.currencyController,
-              icon: Icons.currency_exchange_outlined,
-              textInputAction: TextInputAction.done,
-            ),
-            const VerticalSpace(8),
-            Row(
-              children: [
-                Expanded(
-                  child: BlocBuilder<HomeBloc, HomeState>(
-                    buildWhen: (previous, current) =>
-                        current is LoadingGetCurrencies ||
-                        current is SuccessGetCurrencies ||
-                        current is ErrorGetCurrencies ||
-                        current is SwapCurrencyState ||
-                        current is ChangeCurrencyFromState,
-                    builder: (context, state) {
-                      return CustomDropDown<String>(
-                        flagWidget: bloc.currencyFrom != ''
-                            ? CustomCachedNetworkImage(item: bloc.currencyFrom)
-                            : const Icon(Icons.flag_outlined),
-                        hintText: 'from',
-                        validator: (value) {
-                          return null;
-                        },
-                        onChanged: (value) {
-                          if (value != null) {
-                            bloc.add(ChangeCurrencyFromEvent(
-                                value: value.toString()));
-                          }
-                        },
-                        items: bloc.allCurrencies,
-                        itemAsString: (value) {
-                          return value;
-                        },
-                        filterFn: (text, filter) {
-                          if (text
-                              .toLowerCase()
-                              .contains(filter.toString().toLowerCase())) {
-                            return true;
-                          }
-                          return false;
-                        },
-                        itemBuilder: (context, item, isSelected) {
-                          return DropDownItemBuilder(item: item);
-                        },
-                        selectedItem: bloc.currencyFrom.isNotEmpty == true ? bloc.currencyFrom : null,
-                      );
-                    },
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0.w),
-                  child: FloatingActionButton(
-                    onPressed: () {
-                      bloc.add(const SwapCurrencyEvent());
-                    },
-                    backgroundColor: AppColor.primaryColor,
-                    child: const Icon(Icons.swap_horiz_outlined,
-                        color: AppColor.whiteColor),
-                  ),
-                ),
-                Expanded(
-                  child: BlocBuilder<HomeBloc, HomeState>(
-                    buildWhen: (previous, current) =>
-                        current is LoadingGetCurrencies ||
-                        current is SuccessGetCurrencies ||
-                        current is ErrorGetCurrencies ||
-                        current is SwapCurrencyState ||
-                        current is ChangeCurrencyToState,
-                    builder: (context, state) {
-                      return CustomDropDown<String>(
-                        flagWidget: bloc.currencyTo != ''
-                            ? CustomCachedNetworkImage(item: bloc.currencyTo)
-                            : const Icon(Icons.flag_outlined),
-                        hintText: 'to',
-                        validator: (value) {
-                          return null;
-                        },
-                        onChanged: (value) {
-                          if (value != null) {
-                            bloc.add(
-                                ChangeCurrencyToEvent(value: value.toString()));
-                          }
-                        },
-                        items: bloc.allCurrencies,
-                        itemAsString: (value) {
-                          return value;
-                        },
-                        filterFn: (text, filter) {
-                          if (text
-                              .toLowerCase()
-                              .contains(filter.toString().toLowerCase())) {
-                            return true;
-                          }
-                          return false;
-                        },
-                        itemBuilder: (context, item, isSelected) {
-                          return DropDownItemBuilder(item: item);
-                        },
-                        selectedItem: bloc.currencyTo.isNotEmpty == true ? bloc.currencyTo : null,
-                      );
-                    },
-                  ),
-                ),
-              ],
-            ),
-            const VerticalSpace(32),
-            SizedBox(
-              width: double.infinity,
-              height: 48,
-              child: DecoratedBox(
-                decoration: BoxDecoration(
-                  color: AppColor.primaryColor,
-                  borderRadius: BorderRadius.circular(
-                    kBorderRadius,
-                  ),
-                ),
-                child: MaterialButton(
-                  onPressed: () {},
-                  child: Text(
-                    'CONVERT',
-                    style: Styles.textStyle16.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: AppColor.whiteColor),
-                  ),
-                ),
+        child: Form(
+          key: bloc.homeFormKey,
+          child: Column(
+            children: [
+              Image.asset(
+                AppImage.logo,
+                fit: BoxFit.cover,
+                width: MediaQuery.of(context).size.width * 0.5,
               ),
-            ),
-            const VerticalSpace(32),
-            Card(
-              child: SizedBox(
+              const VerticalSpace(32),
+              CustomTextFormField(
+                labelText: 'Enter Value Of Currency',
+                onChanged: null,
+                validator: (value) {
+                  if(value == null || value.isEmpty) {
+                    return 'required field';
+                  }
+                  return null;
+                },
+                keyboardType: TextInputType.number,
+                controller: bloc.currencyController,
+                icon: Icons.currency_exchange_outlined,
+                textInputAction: TextInputAction.done,
+              ),
+              const VerticalSpace(8),
+              Row(
+                children: [
+                  Expanded(
+                    child: BlocBuilder<HomeBloc, HomeState>(
+                      buildWhen: (previous, current) =>
+                          current is LoadingGetCurrencies ||
+                          current is SuccessGetCurrencies ||
+                          current is ErrorGetCurrencies ||
+                          current is SwapCurrencyState ||
+                          current is ChangeCurrencyFromState,
+                      builder: (context, state) {
+                        return CustomDropDown<String>(
+                          flagWidget: bloc.currencyFrom != ''
+                              ? CustomCachedNetworkImage(item: bloc.currencyFrom)
+                              : const Icon(Icons.flag_outlined),
+                          hintText: 'from',
+                          validator: (value) {
+                            if(value == null) {
+                              return 'required field';
+                            }
+                            return null;
+                          },
+                          onChanged: (value) {
+                            if (value != null) {
+                              bloc.add(ChangeCurrencyFromEvent(
+                                  value: value.toString()));
+                            }
+                          },
+                          items: bloc.allCurrencies,
+                          itemAsString: (value) {
+                            return value;
+                          },
+                          filterFn: (text, filter) {
+                            if (text
+                                .toLowerCase()
+                                .contains(filter.toString().toLowerCase())) {
+                              return true;
+                            }
+                            return false;
+                          },
+                          itemBuilder: (context, item, isSelected) {
+                            return DropDownItemBuilder(item: item);
+                          },
+                          selectedItem: bloc.currencyFrom.isNotEmpty == true
+                              ? bloc.currencyFrom
+                              : null,
+                        );
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0.w),
+                    child: FloatingActionButton(
+                      onPressed: () {
+                        bloc.add(const SwapCurrencyEvent());
+                      },
+                      backgroundColor: AppColor.primaryColor,
+                      child: const Icon(Icons.swap_horiz_outlined,
+                          color: AppColor.whiteColor),
+                    ),
+                  ),
+                  Expanded(
+                    child: BlocBuilder<HomeBloc, HomeState>(
+                      buildWhen: (previous, current) =>
+                          current is LoadingGetCurrencies ||
+                          current is SuccessGetCurrencies ||
+                          current is ErrorGetCurrencies ||
+                          current is SwapCurrencyState ||
+                          current is ChangeCurrencyToState,
+                      builder: (context, state) {
+                        return CustomDropDown<String>(
+                          flagWidget: bloc.currencyTo != ''
+                              ? CustomCachedNetworkImage(item: bloc.currencyTo)
+                              : const Icon(Icons.flag_outlined),
+                          hintText: 'to',
+                          validator: (value) {
+                            if(value == null) {
+                              return 'required field';
+                            }
+                            return null;
+                          },
+                          onChanged: (value) {
+                            if (value != null) {
+                              bloc.add(
+                                  ChangeCurrencyToEvent(value: value.toString()));
+                            }
+                          },
+                          items: bloc.allCurrencies,
+                          itemAsString: (value) {
+                            return value;
+                          },
+                          filterFn: (text, filter) {
+                            if (text
+                                .toLowerCase()
+                                .contains(filter.toString().toLowerCase())) {
+                              return true;
+                            }
+                            return false;
+                          },
+                          itemBuilder: (context, item, isSelected) {
+                            return DropDownItemBuilder(item: item);
+                          },
+                          selectedItem: bloc.currencyTo.isNotEmpty == true
+                              ? bloc.currencyTo
+                              : null,
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
+              const VerticalSpace(32),
+              SizedBox(
                 width: double.infinity,
-                child: Padding(
-                  padding: EdgeInsets.all(16.w),
-                  child: Text('Result: 15.045\$',
-                      style: Styles.textStyle14
-                          .copyWith(fontWeight: FontWeight.bold)),
+                height: 48,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    color: AppColor.primaryColor,
+                    borderRadius: BorderRadius.circular(
+                      kBorderRadius,
+                    ),
+                  ),
+                  child: BlocBuilder<HomeBloc, HomeState>(
+                    builder: (context, state) {
+                      return MaterialButton(
+                        onPressed: () {
+                          bloc.validateThenCallConvertCurrency();
+                        },
+                        child: state is LoadingConvertCurrencyState
+                            ? const Center(
+                                child: CircularProgressIndicator.adaptive(
+                                    backgroundColor: AppColor.whiteColor),
+                              )
+                            : Text(
+                                'CONVERT',
+                                style: Styles.textStyle16.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    color: AppColor.whiteColor),
+                              ),
+                      );
+                    },
+                  ),
                 ),
               ),
-            ),
-          ],
+              const VerticalSpace(32),
+              BlocBuilder<HomeBloc, HomeState>(
+                builder: (context, state) {
+                  if (bloc.moneyConverting.isNotEmpty) {
+                    return Card(
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: Padding(
+                          padding: EdgeInsets.all(16.w),
+                          child: Text('Result: ${bloc.moneyConverting}',
+                              style: Styles.textStyle14
+                                  .copyWith(fontWeight: FontWeight.bold)),
+                        ),
+                      ),
+                    );
+                  }
+                  return const SizedBox.shrink();
+                },
+              ),
+              const HomeBlocListener(),
+            ],
+          ),
         ),
       ),
     );

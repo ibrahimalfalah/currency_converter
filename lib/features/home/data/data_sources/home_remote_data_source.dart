@@ -1,3 +1,5 @@
+import 'package:currency_converter/core/network/api_constants.dart';
+import 'package:currency_converter/features/home/domain/entity/convert_currency_entity.dart';
 import 'package:hive/hive.dart';
 import '../../../../core/helpers/constants.dart';
 import '../../../../core/network/api_service.dart';
@@ -5,6 +7,7 @@ import '../../domain/entity/currencies_entity.dart';
 
 abstract class HomeRemoteDataSource {
   Future<List<String>> fetchAllCurrencies();
+  Future<double> convertCurrency(String currency);
 }
 
 class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
@@ -35,6 +38,19 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
 
     currencies.currencyNames = keysList;
     return currencies.currencyNames ?? [];
+  }
+
+  @override
+  Future<double> convertCurrency(String currency) async {
+    final response = await _apiService.convertCurrency(currency, 'ultra', ApiConstants.apiKey);
+     double rate = mappingConvertCurrency(response, currency);
+    return rate;
+  }
+
+  double mappingConvertCurrency(response, String currency) {
+    ConvertCurrencyEntity currencyEntity = ConvertCurrencyEntity();
+    currencyEntity.rate = response[currency];
+    return currencyEntity.rate ?? 1;
   }
 
 }

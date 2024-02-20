@@ -35,6 +35,7 @@ class CustomDropDown<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DropdownSearch<T>(
+      autoValidateMode: AutovalidateMode.onUserInteraction,
       filterFn: filterFn,
       key: dropDownKey,
       enabled: enabled,

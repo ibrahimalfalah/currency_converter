@@ -7,4 +7,6 @@ class HomeEvent with _$HomeEvent {
   const factory HomeEvent.changeCurrencyFromEvent({required String value}) = ChangeCurrencyFromEvent;
   const factory HomeEvent.changeCurrencyToEvent({required String value}) = ChangeCurrencyToEvent;
   const factory HomeEvent.swapCurrencyEvent() = SwapCurrencyEvent;
+  const factory HomeEvent.convertCurrencyEvent() = ConvertCurrencyEvent;
+  const factory HomeEvent.clearFormEvent() = ClearFormEvent;
 }
