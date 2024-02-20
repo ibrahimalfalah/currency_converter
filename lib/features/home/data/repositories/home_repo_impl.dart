@@ -24,4 +24,14 @@ class HomeRepositoriesImpl extends HomeRepositories {
     }
   }
 
+  @override
+  Future<ApiResult> convertCurrency(String currency) async {
+    try{
+      final response = await homeRemoteDataSource.convertCurrency(currency);
+      return ApiResult.success(response);
+    }catch (error) {
+      return ApiResult.failure(ErrorHandler.handle(error));
+    }
+  }
+
 }

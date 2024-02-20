@@ -11,4 +11,11 @@ abstract class ApiService {
   @GET(ApiConstants.getAllCurrencies)
   Future getAllCurrencies();
 
+  @GET(ApiConstants.convertCurrencies)
+  Future convertCurrency(
+      @Query('q') String currency,
+      @Query('compact') String ultra,
+      @Query('apiKey') String apiKey
+      );
+
 }
