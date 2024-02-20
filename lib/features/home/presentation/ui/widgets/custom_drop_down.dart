@@ -1,8 +1,6 @@
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../../core/helpers/app_color.dart';
 import '../../../../../core/helpers/constants.dart';
 import '../../../../../core/helpers/styles.dart';
 
@@ -19,6 +17,7 @@ class CustomDropDown<T> extends StatelessWidget {
     required this.filterFn,
     this.enabled = true,
     required this.itemBuilder,
+    required this.flagWidget
   });
 
   final String hintText;
@@ -31,6 +30,7 @@ class CustomDropDown<T> extends StatelessWidget {
   final bool Function(T, String)? filterFn;
   final bool enabled;
   final Widget Function(BuildContext, T, bool)? itemBuilder;
+  final Widget flagWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -66,8 +66,9 @@ class CustomDropDown<T> extends StatelessWidget {
       validator: validator,
       items: items,
       selectedItem: selectedItem,
-      dropdownButtonProps: const DropdownButtonProps(
-        color: AppColor.lightGreyColor,
+      dropdownButtonProps:  DropdownButtonProps(
+        icon: flagWidget,
+        padding: EdgeInsets.symmetric(vertical: 4.0.w,horizontal: 16.0.w)
       ),
     );
   }
