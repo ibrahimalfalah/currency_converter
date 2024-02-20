@@ -33,7 +33,7 @@ class _ApiService implements ApiService {
     )
         .compose(
           _dio.options,
-          'api/v7/currencies?apiKey=pr_c885b2ad9fd14be7aff2c690ef001c72',
+          'api/v7/currencies?apiKey=3316afc4adb187e8347b',
           queryParameters: queryParameters,
           data: _data,
         )

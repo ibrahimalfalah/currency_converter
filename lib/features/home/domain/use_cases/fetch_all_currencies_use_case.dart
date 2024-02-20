@@ -11,11 +11,9 @@ class FetchAllCurrenciesUseCase {
     try {
       final  currenciesResult =
       await _homeRepositories.fetchAllCurrencies();
-
       return currenciesResult;
     } catch (error) {
       return ApiResult.failure(ErrorHandler.handle(error));
     }
   }
-
 }

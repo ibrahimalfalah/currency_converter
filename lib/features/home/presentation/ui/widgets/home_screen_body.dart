@@ -7,15 +7,18 @@ import '../../../../../core/helpers/app_color.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/helpers/styles.dart';
 import '../../logic/home_bloc.dart';
+import 'custom_cached_network_image.dart';
 import 'custom_drop_down.dart';
 import 'custom_text_form_field.dart';
+import 'drop_down_item_builder.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    context.read<HomeBloc>().add(const GetCurrenciesEvent());
+    final bloc = context.read<HomeBloc>();
+    bloc.add(const GetCurrenciesEvent());
     return Padding(
       padding: EdgeInsets.only(
         top: 16.0.h,
@@ -38,7 +41,7 @@ class HomeScreenBody extends StatelessWidget {
                 return null;
               },
               keyboardType: TextInputType.number,
-              controller: TextEditingController(),
+              controller: bloc.currencyController,
               icon: Icons.currency_exchange_outlined,
               textInputAction: TextInputAction.done,
             ),
@@ -46,29 +49,44 @@ class HomeScreenBody extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: CustomDropDown<String>(
-                    hintText: 'from',
-                    validator: (value) {
-                      return null;
-                    },
-                    onChanged: (value) {},
-                    items: [],
-                    itemAsString: (value) {
-                      return value;
-                    },
-                    filterFn: (p0, p1) => true,
-                    itemBuilder: (context, item, isSelected) {
-                      return Container(
-                        margin: const EdgeInsets.all(8.0),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            item.toString(),
-                            style: Styles.textStyle16.copyWith(
-                                color: AppColor.primaryColor,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
+                  child: BlocBuilder<HomeBloc, HomeState>(
+                    buildWhen: (previous, current) =>
+                        current is LoadingGetCurrencies ||
+                        current is SuccessGetCurrencies ||
+                        current is ErrorGetCurrencies ||
+                        current is SwapCurrencyState ||
+                        current is ChangeCurrencyFromState,
+                    builder: (context, state) {
+                      return CustomDropDown<String>(
+                        flagWidget: bloc.currencyFrom != ''
+                            ? CustomCachedNetworkImage(item: bloc.currencyFrom)
+                            : const Icon(Icons.flag_outlined),
+                        hintText: 'from',
+                        validator: (value) {
+                          return null;
+                        },
+                        onChanged: (value) {
+                          if (value != null) {
+                            bloc.add(ChangeCurrencyFromEvent(
+                                value: value.toString()));
+                          }
+                        },
+                        items: bloc.allCurrencies,
+                        itemAsString: (value) {
+                          return value;
+                        },
+                        filterFn: (text, filter) {
+                          if (text
+                              .toLowerCase()
+                              .contains(filter.toString().toLowerCase())) {
+                            return true;
+                          }
+                          return false;
+                        },
+                        itemBuilder: (context, item, isSelected) {
+                          return DropDownItemBuilder(item: item);
+                        },
+                        selectedItem: bloc.currencyFrom.isNotEmpty == true ? bloc.currencyFrom : null,
                       );
                     },
                   ),
@@ -76,36 +94,53 @@ class HomeScreenBody extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.0.w),
                   child: FloatingActionButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      bloc.add(const SwapCurrencyEvent());
+                    },
                     backgroundColor: AppColor.primaryColor,
                     child: const Icon(Icons.swap_horiz_outlined,
                         color: AppColor.whiteColor),
                   ),
                 ),
                 Expanded(
-                  child: CustomDropDown<String>(
-                    hintText: 'to',
-                    validator: (value) {
-                      return null;
-                    },
-                    onChanged: (value) {},
-                    items: [],
-                    itemAsString: (value) {
-                      return value;
-                    },
-                    filterFn: (p0, p1) => true,
-                    itemBuilder: (context, item, isSelected) {
-                      return Container(
-                        margin: const EdgeInsets.all(8.0),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            item.toString(),
-                            style: Styles.textStyle16.copyWith(
-                                color: AppColor.primaryColor,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
+                  child: BlocBuilder<HomeBloc, HomeState>(
+                    buildWhen: (previous, current) =>
+                        current is LoadingGetCurrencies ||
+                        current is SuccessGetCurrencies ||
+                        current is ErrorGetCurrencies ||
+                        current is SwapCurrencyState ||
+                        current is ChangeCurrencyToState,
+                    builder: (context, state) {
+                      return CustomDropDown<String>(
+                        flagWidget: bloc.currencyTo != ''
+                            ? CustomCachedNetworkImage(item: bloc.currencyTo)
+                            : const Icon(Icons.flag_outlined),
+                        hintText: 'to',
+                        validator: (value) {
+                          return null;
+                        },
+                        onChanged: (value) {
+                          if (value != null) {
+                            bloc.add(
+                                ChangeCurrencyToEvent(value: value.toString()));
+                          }
+                        },
+                        items: bloc.allCurrencies,
+                        itemAsString: (value) {
+                          return value;
+                        },
+                        filterFn: (text, filter) {
+                          if (text
+                              .toLowerCase()
+                              .contains(filter.toString().toLowerCase())) {
+                            return true;
+                          }
+                          return false;
+                        },
+                        itemBuilder: (context, item, isSelected) {
+                          return DropDownItemBuilder(item: item);
+                        },
+                        selectedItem: bloc.currencyTo.isNotEmpty == true ? bloc.currencyTo : null,
                       );
                     },
                   ),
@@ -124,24 +159,26 @@ class HomeScreenBody extends StatelessWidget {
                   ),
                 ),
                 child: MaterialButton(
-                    onPressed: () {},
-                    child: Text(
-                      'CONVERT',
-                      style: Styles.textStyle16.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.whiteColor),
-                    ),
+                  onPressed: () {},
+                  child: Text(
+                    'CONVERT',
+                    style: Styles.textStyle16.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: AppColor.whiteColor),
+                  ),
                 ),
               ),
             ),
             const VerticalSpace(32),
             Card(
               child: SizedBox(
-                  width: double.infinity,
-                  child: Padding(
-                    padding: EdgeInsets.all(16.w),
-                    child:  Text('Result: 15.045\$',style: Styles.textStyle14.copyWith(fontWeight: FontWeight.bold)),
-                  ),
+                width: double.infinity,
+                child: Padding(
+                  padding: EdgeInsets.all(16.w),
+                  child: Text('Result: 15.045\$',
+                      style: Styles.textStyle14
+                          .copyWith(fontWeight: FontWeight.bold)),
+                ),
               ),
             ),
           ],

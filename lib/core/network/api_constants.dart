@@ -1,6 +1,7 @@
 class ApiConstants {
   static const String apiBaseUrl = "https://free.currconv.com/";
-  static const String apiKey = "pr_c885b2ad9fd14be7aff2c690ef001c72";
+  static const String apiKey = "3316afc4adb187e8347b";
+  //static const String apiKey = "pr_c885b2ad9fd14be7aff2c690ef001c72";
 
   static const String getAllCurrencies = "api/v7/currencies?apiKey=$apiKey";
   static const String convertCurrencies = "api/v7/convert?q=USD_PHP,PHP_USD&compact=ultra&apiKey=$apiKey";
