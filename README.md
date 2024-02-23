@@ -12,3 +12,11 @@
 :white_check_mark: History Currency Screen
 
 ![history-screen](https://github.com/ibrahimalfalah/currency_converter/assets/76217277/92cb75bd-1820-4323-a9ae-d37afcd329de)
+
+
+
+:speech_balloon: I choose cached network image to cache url image
+
+:speech_balloon: I choose hive to cache data because its no sql and very fast and i don't need relational database in this scenario
+
+
