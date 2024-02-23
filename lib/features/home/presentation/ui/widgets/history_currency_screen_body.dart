@@ -3,6 +3,7 @@ import 'package:currency_converter/core/helpers/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../core/helpers/setup_error_message.dart';
 import '../../logic/home_bloc.dart';
 
 class HistoryCurrencyScreenBody extends StatelessWidget {
@@ -11,9 +12,16 @@ class HistoryCurrencyScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bloc = context.read<HomeBloc>();
-    bloc.isActive= [false,false];
+    bloc.isActive = [false, false];
     bloc.add(const HistoryCurrencyEvent());
-    return BlocBuilder<HomeBloc, HomeState>(
+    return BlocConsumer<HomeBloc, HomeState>(
+      listener: (context, state) {
+        state.whenOrNull(
+          errorHistoryCurrencyState: (error) {
+            setupErrorMessage(error: error, context: context);
+          },
+        );
+      },
       builder: (context, state) {
         if (bloc.historyCurrencies?.currencies?.isNotEmpty == true) {
           return Padding(
