@@ -6,7 +6,7 @@ class ApiConstants {
 
   static const String getAllCurrencies = "api/v7/currencies?apiKey=$apiKey";
   static const String convertCurrencies = "api/v7/convert";
-  static const String historyCurrencies = "api/v7/convert?q=USD_PHP,PHP_USD&compact=ultra&date=[yyyy-mm-dd]&endDate=[yyyy-mm-dd]&apiKey=$apiKey";
+  static const String historyCurrencies = "api/v7/convert";
 
 }
 
