@@ -18,4 +18,13 @@ abstract class ApiService {
       @Query('apiKey') String apiKey
       );
 
+  @GET(ApiConstants.convertCurrencies)
+  Future historyCurrency(
+      @Query('q') String currency,
+      @Query('compact') String ultra,
+      @Query('date') String fromDate,
+      @Query('endDate') String endDate,
+      @Query('apiKey') String apiKey
+      );
+
 }

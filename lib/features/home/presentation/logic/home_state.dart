@@ -14,5 +14,10 @@ class HomeState<T> with _$HomeState {
   const factory HomeState.successConvertCurrencyState(double currencies) = SuccessConvertCurrencyState;
   const factory HomeState.errorConvertCurrencyState({required String error}) = ErrorConvertCurrencyState;
 
+  const factory HomeState.loadingHistoryCurrencyState() = LoadingHistoryCurrencyState;
+  const factory HomeState.successHistoryCurrencyState(HistoryCurrencyEntity currencies) = SuccessHistoryCurrencyState;
+  const factory HomeState.errorHistoryCurrencyState({required String error}) = ErrorHistoryCurrencyState;
+
   const factory HomeState.clearFormState() = ClearFormState;
+  const factory HomeState.expandedExpansionPanelState() = ExpandedExpansionPanelState;
 }

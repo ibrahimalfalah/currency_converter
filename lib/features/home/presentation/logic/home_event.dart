@@ -8,5 +8,7 @@ class HomeEvent with _$HomeEvent {
   const factory HomeEvent.changeCurrencyToEvent({required CurrencyInfoEntity value}) = ChangeCurrencyToEvent;
   const factory HomeEvent.swapCurrencyEvent() = SwapCurrencyEvent;
   const factory HomeEvent.convertCurrencyEvent() = ConvertCurrencyEvent;
+  const factory HomeEvent.historyCurrencyEvent() = HistoryCurrencyEvent;
   const factory HomeEvent.clearFormEvent() = ClearFormEvent;
+  const factory HomeEvent.expandedExpansionPanelEvent({required int index}) = ExpandedExpansionPanelEvent;
 }

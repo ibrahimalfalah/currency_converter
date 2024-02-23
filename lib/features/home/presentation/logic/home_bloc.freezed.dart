@@ -24,7 +24,9 @@ mixin _$HomeEvent {
     required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
+    required TResult Function() historyCurrencyEvent,
     required TResult Function() clearFormEvent,
+    required TResult Function(int index) expandedExpansionPanelEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,7 +37,9 @@ mixin _$HomeEvent {
     TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
+    TResult? Function()? historyCurrencyEvent,
     TResult? Function()? clearFormEvent,
+    TResult? Function(int index)? expandedExpansionPanelEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -46,7 +50,9 @@ mixin _$HomeEvent {
     TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
+    TResult Function()? historyCurrencyEvent,
     TResult Function()? clearFormEvent,
+    TResult Function(int index)? expandedExpansionPanelEvent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,7 +66,10 @@ mixin _$HomeEvent {
         changeCurrencyToEvent,
     required TResult Function(SwapCurrencyEvent value) swapCurrencyEvent,
     required TResult Function(ConvertCurrencyEvent value) convertCurrencyEvent,
+    required TResult Function(HistoryCurrencyEvent value) historyCurrencyEvent,
     required TResult Function(ClearFormEvent value) clearFormEvent,
+    required TResult Function(ExpandedExpansionPanelEvent value)
+        expandedExpansionPanelEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -71,7 +80,10 @@ mixin _$HomeEvent {
     TResult? Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult? Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult? Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult? Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult? Function(ClearFormEvent value)? clearFormEvent,
+    TResult? Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,7 +94,10 @@ mixin _$HomeEvent {
     TResult Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult Function(ClearFormEvent value)? clearFormEvent,
+    TResult Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -149,7 +164,9 @@ class _$StartedImpl implements _Started {
     required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
+    required TResult Function() historyCurrencyEvent,
     required TResult Function() clearFormEvent,
+    required TResult Function(int index) expandedExpansionPanelEvent,
   }) {
     return started();
   }
@@ -163,7 +180,9 @@ class _$StartedImpl implements _Started {
     TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
+    TResult? Function()? historyCurrencyEvent,
     TResult? Function()? clearFormEvent,
+    TResult? Function(int index)? expandedExpansionPanelEvent,
   }) {
     return started?.call();
   }
@@ -177,7 +196,9 @@ class _$StartedImpl implements _Started {
     TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
+    TResult Function()? historyCurrencyEvent,
     TResult Function()? clearFormEvent,
+    TResult Function(int index)? expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -197,7 +218,10 @@ class _$StartedImpl implements _Started {
         changeCurrencyToEvent,
     required TResult Function(SwapCurrencyEvent value) swapCurrencyEvent,
     required TResult Function(ConvertCurrencyEvent value) convertCurrencyEvent,
+    required TResult Function(HistoryCurrencyEvent value) historyCurrencyEvent,
     required TResult Function(ClearFormEvent value) clearFormEvent,
+    required TResult Function(ExpandedExpansionPanelEvent value)
+        expandedExpansionPanelEvent,
   }) {
     return started(this);
   }
@@ -211,7 +235,10 @@ class _$StartedImpl implements _Started {
     TResult? Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult? Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult? Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult? Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult? Function(ClearFormEvent value)? clearFormEvent,
+    TResult? Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
   }) {
     return started?.call(this);
   }
@@ -225,7 +252,10 @@ class _$StartedImpl implements _Started {
     TResult Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult Function(ClearFormEvent value)? clearFormEvent,
+    TResult Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -283,7 +313,9 @@ class _$GetCurrenciesEventImpl implements GetCurrenciesEvent {
     required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
+    required TResult Function() historyCurrencyEvent,
     required TResult Function() clearFormEvent,
+    required TResult Function(int index) expandedExpansionPanelEvent,
   }) {
     return getCurrenciesEvent();
   }
@@ -297,7 +329,9 @@ class _$GetCurrenciesEventImpl implements GetCurrenciesEvent {
     TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
+    TResult? Function()? historyCurrencyEvent,
     TResult? Function()? clearFormEvent,
+    TResult? Function(int index)? expandedExpansionPanelEvent,
   }) {
     return getCurrenciesEvent?.call();
   }
@@ -311,7 +345,9 @@ class _$GetCurrenciesEventImpl implements GetCurrenciesEvent {
     TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
+    TResult Function()? historyCurrencyEvent,
     TResult Function()? clearFormEvent,
+    TResult Function(int index)? expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (getCurrenciesEvent != null) {
@@ -331,7 +367,10 @@ class _$GetCurrenciesEventImpl implements GetCurrenciesEvent {
         changeCurrencyToEvent,
     required TResult Function(SwapCurrencyEvent value) swapCurrencyEvent,
     required TResult Function(ConvertCurrencyEvent value) convertCurrencyEvent,
+    required TResult Function(HistoryCurrencyEvent value) historyCurrencyEvent,
     required TResult Function(ClearFormEvent value) clearFormEvent,
+    required TResult Function(ExpandedExpansionPanelEvent value)
+        expandedExpansionPanelEvent,
   }) {
     return getCurrenciesEvent(this);
   }
@@ -345,7 +384,10 @@ class _$GetCurrenciesEventImpl implements GetCurrenciesEvent {
     TResult? Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult? Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult? Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult? Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult? Function(ClearFormEvent value)? clearFormEvent,
+    TResult? Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
   }) {
     return getCurrenciesEvent?.call(this);
   }
@@ -359,7 +401,10 @@ class _$GetCurrenciesEventImpl implements GetCurrenciesEvent {
     TResult Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult Function(ClearFormEvent value)? clearFormEvent,
+    TResult Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (getCurrenciesEvent != null) {
@@ -446,7 +491,9 @@ class _$ChangeCurrencyFromEventImpl implements ChangeCurrencyFromEvent {
     required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
+    required TResult Function() historyCurrencyEvent,
     required TResult Function() clearFormEvent,
+    required TResult Function(int index) expandedExpansionPanelEvent,
   }) {
     return changeCurrencyFromEvent(value);
   }
@@ -460,7 +507,9 @@ class _$ChangeCurrencyFromEventImpl implements ChangeCurrencyFromEvent {
     TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
+    TResult? Function()? historyCurrencyEvent,
     TResult? Function()? clearFormEvent,
+    TResult? Function(int index)? expandedExpansionPanelEvent,
   }) {
     return changeCurrencyFromEvent?.call(value);
   }
@@ -474,7 +523,9 @@ class _$ChangeCurrencyFromEventImpl implements ChangeCurrencyFromEvent {
     TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
+    TResult Function()? historyCurrencyEvent,
     TResult Function()? clearFormEvent,
+    TResult Function(int index)? expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (changeCurrencyFromEvent != null) {
@@ -494,7 +545,10 @@ class _$ChangeCurrencyFromEventImpl implements ChangeCurrencyFromEvent {
         changeCurrencyToEvent,
     required TResult Function(SwapCurrencyEvent value) swapCurrencyEvent,
     required TResult Function(ConvertCurrencyEvent value) convertCurrencyEvent,
+    required TResult Function(HistoryCurrencyEvent value) historyCurrencyEvent,
     required TResult Function(ClearFormEvent value) clearFormEvent,
+    required TResult Function(ExpandedExpansionPanelEvent value)
+        expandedExpansionPanelEvent,
   }) {
     return changeCurrencyFromEvent(this);
   }
@@ -508,7 +562,10 @@ class _$ChangeCurrencyFromEventImpl implements ChangeCurrencyFromEvent {
     TResult? Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult? Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult? Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult? Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult? Function(ClearFormEvent value)? clearFormEvent,
+    TResult? Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
   }) {
     return changeCurrencyFromEvent?.call(this);
   }
@@ -522,7 +579,10 @@ class _$ChangeCurrencyFromEventImpl implements ChangeCurrencyFromEvent {
     TResult Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult Function(ClearFormEvent value)? clearFormEvent,
+    TResult Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (changeCurrencyFromEvent != null) {
@@ -615,7 +675,9 @@ class _$ChangeCurrencyToEventImpl implements ChangeCurrencyToEvent {
     required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
+    required TResult Function() historyCurrencyEvent,
     required TResult Function() clearFormEvent,
+    required TResult Function(int index) expandedExpansionPanelEvent,
   }) {
     return changeCurrencyToEvent(value);
   }
@@ -629,7 +691,9 @@ class _$ChangeCurrencyToEventImpl implements ChangeCurrencyToEvent {
     TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
+    TResult? Function()? historyCurrencyEvent,
     TResult? Function()? clearFormEvent,
+    TResult? Function(int index)? expandedExpansionPanelEvent,
   }) {
     return changeCurrencyToEvent?.call(value);
   }
@@ -643,7 +707,9 @@ class _$ChangeCurrencyToEventImpl implements ChangeCurrencyToEvent {
     TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
+    TResult Function()? historyCurrencyEvent,
     TResult Function()? clearFormEvent,
+    TResult Function(int index)? expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (changeCurrencyToEvent != null) {
@@ -663,7 +729,10 @@ class _$ChangeCurrencyToEventImpl implements ChangeCurrencyToEvent {
         changeCurrencyToEvent,
     required TResult Function(SwapCurrencyEvent value) swapCurrencyEvent,
     required TResult Function(ConvertCurrencyEvent value) convertCurrencyEvent,
+    required TResult Function(HistoryCurrencyEvent value) historyCurrencyEvent,
     required TResult Function(ClearFormEvent value) clearFormEvent,
+    required TResult Function(ExpandedExpansionPanelEvent value)
+        expandedExpansionPanelEvent,
   }) {
     return changeCurrencyToEvent(this);
   }
@@ -677,7 +746,10 @@ class _$ChangeCurrencyToEventImpl implements ChangeCurrencyToEvent {
     TResult? Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult? Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult? Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult? Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult? Function(ClearFormEvent value)? clearFormEvent,
+    TResult? Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
   }) {
     return changeCurrencyToEvent?.call(this);
   }
@@ -691,7 +763,10 @@ class _$ChangeCurrencyToEventImpl implements ChangeCurrencyToEvent {
     TResult Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult Function(ClearFormEvent value)? clearFormEvent,
+    TResult Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (changeCurrencyToEvent != null) {
@@ -755,7 +830,9 @@ class _$SwapCurrencyEventImpl implements SwapCurrencyEvent {
     required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
+    required TResult Function() historyCurrencyEvent,
     required TResult Function() clearFormEvent,
+    required TResult Function(int index) expandedExpansionPanelEvent,
   }) {
     return swapCurrencyEvent();
   }
@@ -769,7 +846,9 @@ class _$SwapCurrencyEventImpl implements SwapCurrencyEvent {
     TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
+    TResult? Function()? historyCurrencyEvent,
     TResult? Function()? clearFormEvent,
+    TResult? Function(int index)? expandedExpansionPanelEvent,
   }) {
     return swapCurrencyEvent?.call();
   }
@@ -783,7 +862,9 @@ class _$SwapCurrencyEventImpl implements SwapCurrencyEvent {
     TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
+    TResult Function()? historyCurrencyEvent,
     TResult Function()? clearFormEvent,
+    TResult Function(int index)? expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (swapCurrencyEvent != null) {
@@ -803,7 +884,10 @@ class _$SwapCurrencyEventImpl implements SwapCurrencyEvent {
         changeCurrencyToEvent,
     required TResult Function(SwapCurrencyEvent value) swapCurrencyEvent,
     required TResult Function(ConvertCurrencyEvent value) convertCurrencyEvent,
+    required TResult Function(HistoryCurrencyEvent value) historyCurrencyEvent,
     required TResult Function(ClearFormEvent value) clearFormEvent,
+    required TResult Function(ExpandedExpansionPanelEvent value)
+        expandedExpansionPanelEvent,
   }) {
     return swapCurrencyEvent(this);
   }
@@ -817,7 +901,10 @@ class _$SwapCurrencyEventImpl implements SwapCurrencyEvent {
     TResult? Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult? Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult? Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult? Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult? Function(ClearFormEvent value)? clearFormEvent,
+    TResult? Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
   }) {
     return swapCurrencyEvent?.call(this);
   }
@@ -831,7 +918,10 @@ class _$SwapCurrencyEventImpl implements SwapCurrencyEvent {
     TResult Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult Function(ClearFormEvent value)? clearFormEvent,
+    TResult Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (swapCurrencyEvent != null) {
@@ -890,7 +980,9 @@ class _$ConvertCurrencyEventImpl implements ConvertCurrencyEvent {
     required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
+    required TResult Function() historyCurrencyEvent,
     required TResult Function() clearFormEvent,
+    required TResult Function(int index) expandedExpansionPanelEvent,
   }) {
     return convertCurrencyEvent();
   }
@@ -904,7 +996,9 @@ class _$ConvertCurrencyEventImpl implements ConvertCurrencyEvent {
     TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
+    TResult? Function()? historyCurrencyEvent,
     TResult? Function()? clearFormEvent,
+    TResult? Function(int index)? expandedExpansionPanelEvent,
   }) {
     return convertCurrencyEvent?.call();
   }
@@ -918,7 +1012,9 @@ class _$ConvertCurrencyEventImpl implements ConvertCurrencyEvent {
     TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
+    TResult Function()? historyCurrencyEvent,
     TResult Function()? clearFormEvent,
+    TResult Function(int index)? expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (convertCurrencyEvent != null) {
@@ -938,7 +1034,10 @@ class _$ConvertCurrencyEventImpl implements ConvertCurrencyEvent {
         changeCurrencyToEvent,
     required TResult Function(SwapCurrencyEvent value) swapCurrencyEvent,
     required TResult Function(ConvertCurrencyEvent value) convertCurrencyEvent,
+    required TResult Function(HistoryCurrencyEvent value) historyCurrencyEvent,
     required TResult Function(ClearFormEvent value) clearFormEvent,
+    required TResult Function(ExpandedExpansionPanelEvent value)
+        expandedExpansionPanelEvent,
   }) {
     return convertCurrencyEvent(this);
   }
@@ -952,7 +1051,10 @@ class _$ConvertCurrencyEventImpl implements ConvertCurrencyEvent {
     TResult? Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult? Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult? Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult? Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult? Function(ClearFormEvent value)? clearFormEvent,
+    TResult? Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
   }) {
     return convertCurrencyEvent?.call(this);
   }
@@ -966,7 +1068,10 @@ class _$ConvertCurrencyEventImpl implements ConvertCurrencyEvent {
     TResult Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult Function(ClearFormEvent value)? clearFormEvent,
+    TResult Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (convertCurrencyEvent != null) {
@@ -978,6 +1083,156 @@ class _$ConvertCurrencyEventImpl implements ConvertCurrencyEvent {
 
 abstract class ConvertCurrencyEvent implements HomeEvent {
   const factory ConvertCurrencyEvent() = _$ConvertCurrencyEventImpl;
+}
+
+/// @nodoc
+abstract class _$$HistoryCurrencyEventImplCopyWith<$Res> {
+  factory _$$HistoryCurrencyEventImplCopyWith(_$HistoryCurrencyEventImpl value,
+          $Res Function(_$HistoryCurrencyEventImpl) then) =
+      __$$HistoryCurrencyEventImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$HistoryCurrencyEventImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$HistoryCurrencyEventImpl>
+    implements _$$HistoryCurrencyEventImplCopyWith<$Res> {
+  __$$HistoryCurrencyEventImplCopyWithImpl(_$HistoryCurrencyEventImpl _value,
+      $Res Function(_$HistoryCurrencyEventImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$HistoryCurrencyEventImpl implements HistoryCurrencyEvent {
+  const _$HistoryCurrencyEventImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.historyCurrencyEvent()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HistoryCurrencyEventImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getCurrenciesEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyFromEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
+    required TResult Function() swapCurrencyEvent,
+    required TResult Function() convertCurrencyEvent,
+    required TResult Function() historyCurrencyEvent,
+    required TResult Function() clearFormEvent,
+    required TResult Function(int index) expandedExpansionPanelEvent,
+  }) {
+    return historyCurrencyEvent();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getCurrenciesEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
+    TResult? Function()? swapCurrencyEvent,
+    TResult? Function()? convertCurrencyEvent,
+    TResult? Function()? historyCurrencyEvent,
+    TResult? Function()? clearFormEvent,
+    TResult? Function(int index)? expandedExpansionPanelEvent,
+  }) {
+    return historyCurrencyEvent?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getCurrenciesEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
+    TResult Function()? swapCurrencyEvent,
+    TResult Function()? convertCurrencyEvent,
+    TResult Function()? historyCurrencyEvent,
+    TResult Function()? clearFormEvent,
+    TResult Function(int index)? expandedExpansionPanelEvent,
+    required TResult orElse(),
+  }) {
+    if (historyCurrencyEvent != null) {
+      return historyCurrencyEvent();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(GetCurrenciesEvent value) getCurrenciesEvent,
+    required TResult Function(ChangeCurrencyFromEvent value)
+        changeCurrencyFromEvent,
+    required TResult Function(ChangeCurrencyToEvent value)
+        changeCurrencyToEvent,
+    required TResult Function(SwapCurrencyEvent value) swapCurrencyEvent,
+    required TResult Function(ConvertCurrencyEvent value) convertCurrencyEvent,
+    required TResult Function(HistoryCurrencyEvent value) historyCurrencyEvent,
+    required TResult Function(ClearFormEvent value) clearFormEvent,
+    required TResult Function(ExpandedExpansionPanelEvent value)
+        expandedExpansionPanelEvent,
+  }) {
+    return historyCurrencyEvent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(GetCurrenciesEvent value)? getCurrenciesEvent,
+    TResult? Function(ChangeCurrencyFromEvent value)? changeCurrencyFromEvent,
+    TResult? Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
+    TResult? Function(SwapCurrencyEvent value)? swapCurrencyEvent,
+    TResult? Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult? Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
+    TResult? Function(ClearFormEvent value)? clearFormEvent,
+    TResult? Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
+  }) {
+    return historyCurrencyEvent?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(GetCurrenciesEvent value)? getCurrenciesEvent,
+    TResult Function(ChangeCurrencyFromEvent value)? changeCurrencyFromEvent,
+    TResult Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
+    TResult Function(SwapCurrencyEvent value)? swapCurrencyEvent,
+    TResult Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
+    TResult Function(ClearFormEvent value)? clearFormEvent,
+    TResult Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
+    required TResult orElse(),
+  }) {
+    if (historyCurrencyEvent != null) {
+      return historyCurrencyEvent(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HistoryCurrencyEvent implements HomeEvent {
+  const factory HistoryCurrencyEvent() = _$HistoryCurrencyEventImpl;
 }
 
 /// @nodoc
@@ -1024,7 +1279,9 @@ class _$ClearFormEventImpl implements ClearFormEvent {
     required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
+    required TResult Function() historyCurrencyEvent,
     required TResult Function() clearFormEvent,
+    required TResult Function(int index) expandedExpansionPanelEvent,
   }) {
     return clearFormEvent();
   }
@@ -1038,7 +1295,9 @@ class _$ClearFormEventImpl implements ClearFormEvent {
     TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
+    TResult? Function()? historyCurrencyEvent,
     TResult? Function()? clearFormEvent,
+    TResult? Function(int index)? expandedExpansionPanelEvent,
   }) {
     return clearFormEvent?.call();
   }
@@ -1052,7 +1311,9 @@ class _$ClearFormEventImpl implements ClearFormEvent {
     TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
+    TResult Function()? historyCurrencyEvent,
     TResult Function()? clearFormEvent,
+    TResult Function(int index)? expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (clearFormEvent != null) {
@@ -1072,7 +1333,10 @@ class _$ClearFormEventImpl implements ClearFormEvent {
         changeCurrencyToEvent,
     required TResult Function(SwapCurrencyEvent value) swapCurrencyEvent,
     required TResult Function(ConvertCurrencyEvent value) convertCurrencyEvent,
+    required TResult Function(HistoryCurrencyEvent value) historyCurrencyEvent,
     required TResult Function(ClearFormEvent value) clearFormEvent,
+    required TResult Function(ExpandedExpansionPanelEvent value)
+        expandedExpansionPanelEvent,
   }) {
     return clearFormEvent(this);
   }
@@ -1086,7 +1350,10 @@ class _$ClearFormEventImpl implements ClearFormEvent {
     TResult? Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult? Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult? Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult? Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult? Function(ClearFormEvent value)? clearFormEvent,
+    TResult? Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
   }) {
     return clearFormEvent?.call(this);
   }
@@ -1100,7 +1367,10 @@ class _$ClearFormEventImpl implements ClearFormEvent {
     TResult Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
     TResult Function(SwapCurrencyEvent value)? swapCurrencyEvent,
     TResult Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
     TResult Function(ClearFormEvent value)? clearFormEvent,
+    TResult Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
     required TResult orElse(),
   }) {
     if (clearFormEvent != null) {
@@ -1112,6 +1382,190 @@ class _$ClearFormEventImpl implements ClearFormEvent {
 
 abstract class ClearFormEvent implements HomeEvent {
   const factory ClearFormEvent() = _$ClearFormEventImpl;
+}
+
+/// @nodoc
+abstract class _$$ExpandedExpansionPanelEventImplCopyWith<$Res> {
+  factory _$$ExpandedExpansionPanelEventImplCopyWith(
+          _$ExpandedExpansionPanelEventImpl value,
+          $Res Function(_$ExpandedExpansionPanelEventImpl) then) =
+      __$$ExpandedExpansionPanelEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index});
+}
+
+/// @nodoc
+class __$$ExpandedExpansionPanelEventImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$ExpandedExpansionPanelEventImpl>
+    implements _$$ExpandedExpansionPanelEventImplCopyWith<$Res> {
+  __$$ExpandedExpansionPanelEventImplCopyWithImpl(
+      _$ExpandedExpansionPanelEventImpl _value,
+      $Res Function(_$ExpandedExpansionPanelEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$ExpandedExpansionPanelEventImpl(
+      index: null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ExpandedExpansionPanelEventImpl implements ExpandedExpansionPanelEvent {
+  const _$ExpandedExpansionPanelEventImpl({required this.index});
+
+  @override
+  final int index;
+
+  @override
+  String toString() {
+    return 'HomeEvent.expandedExpansionPanelEvent(index: $index)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ExpandedExpansionPanelEventImpl &&
+            (identical(other.index, index) || other.index == index));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ExpandedExpansionPanelEventImplCopyWith<_$ExpandedExpansionPanelEventImpl>
+      get copyWith => __$$ExpandedExpansionPanelEventImplCopyWithImpl<
+          _$ExpandedExpansionPanelEventImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getCurrenciesEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyFromEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
+    required TResult Function() swapCurrencyEvent,
+    required TResult Function() convertCurrencyEvent,
+    required TResult Function() historyCurrencyEvent,
+    required TResult Function() clearFormEvent,
+    required TResult Function(int index) expandedExpansionPanelEvent,
+  }) {
+    return expandedExpansionPanelEvent(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getCurrenciesEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
+    TResult? Function()? swapCurrencyEvent,
+    TResult? Function()? convertCurrencyEvent,
+    TResult? Function()? historyCurrencyEvent,
+    TResult? Function()? clearFormEvent,
+    TResult? Function(int index)? expandedExpansionPanelEvent,
+  }) {
+    return expandedExpansionPanelEvent?.call(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getCurrenciesEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
+    TResult Function()? swapCurrencyEvent,
+    TResult Function()? convertCurrencyEvent,
+    TResult Function()? historyCurrencyEvent,
+    TResult Function()? clearFormEvent,
+    TResult Function(int index)? expandedExpansionPanelEvent,
+    required TResult orElse(),
+  }) {
+    if (expandedExpansionPanelEvent != null) {
+      return expandedExpansionPanelEvent(index);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(GetCurrenciesEvent value) getCurrenciesEvent,
+    required TResult Function(ChangeCurrencyFromEvent value)
+        changeCurrencyFromEvent,
+    required TResult Function(ChangeCurrencyToEvent value)
+        changeCurrencyToEvent,
+    required TResult Function(SwapCurrencyEvent value) swapCurrencyEvent,
+    required TResult Function(ConvertCurrencyEvent value) convertCurrencyEvent,
+    required TResult Function(HistoryCurrencyEvent value) historyCurrencyEvent,
+    required TResult Function(ClearFormEvent value) clearFormEvent,
+    required TResult Function(ExpandedExpansionPanelEvent value)
+        expandedExpansionPanelEvent,
+  }) {
+    return expandedExpansionPanelEvent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(GetCurrenciesEvent value)? getCurrenciesEvent,
+    TResult? Function(ChangeCurrencyFromEvent value)? changeCurrencyFromEvent,
+    TResult? Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
+    TResult? Function(SwapCurrencyEvent value)? swapCurrencyEvent,
+    TResult? Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult? Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
+    TResult? Function(ClearFormEvent value)? clearFormEvent,
+    TResult? Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
+  }) {
+    return expandedExpansionPanelEvent?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(GetCurrenciesEvent value)? getCurrenciesEvent,
+    TResult Function(ChangeCurrencyFromEvent value)? changeCurrencyFromEvent,
+    TResult Function(ChangeCurrencyToEvent value)? changeCurrencyToEvent,
+    TResult Function(SwapCurrencyEvent value)? swapCurrencyEvent,
+    TResult Function(ConvertCurrencyEvent value)? convertCurrencyEvent,
+    TResult Function(HistoryCurrencyEvent value)? historyCurrencyEvent,
+    TResult Function(ClearFormEvent value)? clearFormEvent,
+    TResult Function(ExpandedExpansionPanelEvent value)?
+        expandedExpansionPanelEvent,
+    required TResult orElse(),
+  }) {
+    if (expandedExpansionPanelEvent != null) {
+      return expandedExpansionPanelEvent(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ExpandedExpansionPanelEvent implements HomeEvent {
+  const factory ExpandedExpansionPanelEvent({required final int index}) =
+      _$ExpandedExpansionPanelEventImpl;
+
+  int get index;
+  @JsonKey(ignore: true)
+  _$$ExpandedExpansionPanelEventImplCopyWith<_$ExpandedExpansionPanelEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1128,7 +1582,12 @@ mixin _$HomeState<T> {
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1143,7 +1602,12 @@ mixin _$HomeState<T> {
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1158,7 +1622,12 @@ mixin _$HomeState<T> {
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1181,7 +1650,15 @@ mixin _$HomeState<T> {
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1200,7 +1677,15 @@ mixin _$HomeState<T> {
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1218,7 +1703,15 @@ mixin _$HomeState<T> {
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1290,7 +1783,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) {
     return initial();
   }
@@ -1308,7 +1806,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) {
     return initial?.call();
   }
@@ -1326,7 +1829,12 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1355,7 +1863,15 @@ class _$InitialImpl<T> implements _Initial<T> {
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) {
     return initial(this);
   }
@@ -1377,7 +1893,15 @@ class _$InitialImpl<T> implements _Initial<T> {
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) {
     return initial?.call(this);
   }
@@ -1398,7 +1922,15 @@ class _$InitialImpl<T> implements _Initial<T> {
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1462,7 +1994,12 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) {
     return loadingGetCurrencies();
   }
@@ -1480,7 +2017,12 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) {
     return loadingGetCurrencies?.call();
   }
@@ -1498,7 +2040,12 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (loadingGetCurrencies != null) {
@@ -1527,7 +2074,15 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) {
     return loadingGetCurrencies(this);
   }
@@ -1549,7 +2104,15 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) {
     return loadingGetCurrencies?.call(this);
   }
@@ -1570,7 +2133,15 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (loadingGetCurrencies != null) {
@@ -1661,7 +2232,12 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) {
     return successGetCurrencies(currencies);
   }
@@ -1679,7 +2255,12 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) {
     return successGetCurrencies?.call(currencies);
   }
@@ -1697,7 +2278,12 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (successGetCurrencies != null) {
@@ -1726,7 +2312,15 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) {
     return successGetCurrencies(this);
   }
@@ -1748,7 +2342,15 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) {
     return successGetCurrencies?.call(this);
   }
@@ -1769,7 +2371,15 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (successGetCurrencies != null) {
@@ -1864,7 +2474,12 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) {
     return errorGetCurrencies(error);
   }
@@ -1882,7 +2497,12 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) {
     return errorGetCurrencies?.call(error);
   }
@@ -1900,7 +2520,12 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (errorGetCurrencies != null) {
@@ -1929,7 +2554,15 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) {
     return errorGetCurrencies(this);
   }
@@ -1951,7 +2584,15 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) {
     return errorGetCurrencies?.call(this);
   }
@@ -1972,7 +2613,15 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (errorGetCurrencies != null) {
@@ -2043,7 +2692,12 @@ class _$ChangeCurrencyFromStateImpl<T> implements ChangeCurrencyFromState<T> {
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) {
     return changeCurrencyFromState();
   }
@@ -2061,7 +2715,12 @@ class _$ChangeCurrencyFromStateImpl<T> implements ChangeCurrencyFromState<T> {
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) {
     return changeCurrencyFromState?.call();
   }
@@ -2079,7 +2738,12 @@ class _$ChangeCurrencyFromStateImpl<T> implements ChangeCurrencyFromState<T> {
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (changeCurrencyFromState != null) {
@@ -2108,7 +2772,15 @@ class _$ChangeCurrencyFromStateImpl<T> implements ChangeCurrencyFromState<T> {
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) {
     return changeCurrencyFromState(this);
   }
@@ -2130,7 +2802,15 @@ class _$ChangeCurrencyFromStateImpl<T> implements ChangeCurrencyFromState<T> {
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) {
     return changeCurrencyFromState?.call(this);
   }
@@ -2151,7 +2831,15 @@ class _$ChangeCurrencyFromStateImpl<T> implements ChangeCurrencyFromState<T> {
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (changeCurrencyFromState != null) {
@@ -2216,7 +2904,12 @@ class _$ChangeCurrencyToStateImpl<T> implements ChangeCurrencyToState<T> {
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) {
     return changeCurrencyToState();
   }
@@ -2234,7 +2927,12 @@ class _$ChangeCurrencyToStateImpl<T> implements ChangeCurrencyToState<T> {
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) {
     return changeCurrencyToState?.call();
   }
@@ -2252,7 +2950,12 @@ class _$ChangeCurrencyToStateImpl<T> implements ChangeCurrencyToState<T> {
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (changeCurrencyToState != null) {
@@ -2281,7 +2984,15 @@ class _$ChangeCurrencyToStateImpl<T> implements ChangeCurrencyToState<T> {
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) {
     return changeCurrencyToState(this);
   }
@@ -2303,7 +3014,15 @@ class _$ChangeCurrencyToStateImpl<T> implements ChangeCurrencyToState<T> {
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) {
     return changeCurrencyToState?.call(this);
   }
@@ -2324,7 +3043,15 @@ class _$ChangeCurrencyToStateImpl<T> implements ChangeCurrencyToState<T> {
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (changeCurrencyToState != null) {
@@ -2387,7 +3114,12 @@ class _$SwapCurrencyStateImpl<T> implements SwapCurrencyState<T> {
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) {
     return swapCurrencyState();
   }
@@ -2405,7 +3137,12 @@ class _$SwapCurrencyStateImpl<T> implements SwapCurrencyState<T> {
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) {
     return swapCurrencyState?.call();
   }
@@ -2423,7 +3160,12 @@ class _$SwapCurrencyStateImpl<T> implements SwapCurrencyState<T> {
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (swapCurrencyState != null) {
@@ -2452,7 +3194,15 @@ class _$SwapCurrencyStateImpl<T> implements SwapCurrencyState<T> {
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) {
     return swapCurrencyState(this);
   }
@@ -2474,7 +3224,15 @@ class _$SwapCurrencyStateImpl<T> implements SwapCurrencyState<T> {
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) {
     return swapCurrencyState?.call(this);
   }
@@ -2495,7 +3253,15 @@ class _$SwapCurrencyStateImpl<T> implements SwapCurrencyState<T> {
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (swapCurrencyState != null) {
@@ -2562,7 +3328,12 @@ class _$LoadingConvertCurrencyStateImpl<T>
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) {
     return loadingConvertCurrencyState();
   }
@@ -2580,7 +3351,12 @@ class _$LoadingConvertCurrencyStateImpl<T>
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) {
     return loadingConvertCurrencyState?.call();
   }
@@ -2598,7 +3374,12 @@ class _$LoadingConvertCurrencyStateImpl<T>
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (loadingConvertCurrencyState != null) {
@@ -2627,7 +3408,15 @@ class _$LoadingConvertCurrencyStateImpl<T>
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) {
     return loadingConvertCurrencyState(this);
   }
@@ -2649,7 +3438,15 @@ class _$LoadingConvertCurrencyStateImpl<T>
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) {
     return loadingConvertCurrencyState?.call(this);
   }
@@ -2670,7 +3467,15 @@ class _$LoadingConvertCurrencyStateImpl<T>
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (loadingConvertCurrencyState != null) {
@@ -2766,7 +3571,12 @@ class _$SuccessConvertCurrencyStateImpl<T>
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) {
     return successConvertCurrencyState(currencies);
   }
@@ -2784,7 +3594,12 @@ class _$SuccessConvertCurrencyStateImpl<T>
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) {
     return successConvertCurrencyState?.call(currencies);
   }
@@ -2802,7 +3617,12 @@ class _$SuccessConvertCurrencyStateImpl<T>
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (successConvertCurrencyState != null) {
@@ -2831,7 +3651,15 @@ class _$SuccessConvertCurrencyStateImpl<T>
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) {
     return successConvertCurrencyState(this);
   }
@@ -2853,7 +3681,15 @@ class _$SuccessConvertCurrencyStateImpl<T>
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) {
     return successConvertCurrencyState?.call(this);
   }
@@ -2874,7 +3710,15 @@ class _$SuccessConvertCurrencyStateImpl<T>
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (successConvertCurrencyState != null) {
@@ -2974,7 +3818,12 @@ class _$ErrorConvertCurrencyStateImpl<T>
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) {
     return errorConvertCurrencyState(error);
   }
@@ -2992,7 +3841,12 @@ class _$ErrorConvertCurrencyStateImpl<T>
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) {
     return errorConvertCurrencyState?.call(error);
   }
@@ -3010,7 +3864,12 @@ class _$ErrorConvertCurrencyStateImpl<T>
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (errorConvertCurrencyState != null) {
@@ -3039,7 +3898,15 @@ class _$ErrorConvertCurrencyStateImpl<T>
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) {
     return errorConvertCurrencyState(this);
   }
@@ -3061,7 +3928,15 @@ class _$ErrorConvertCurrencyStateImpl<T>
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) {
     return errorConvertCurrencyState?.call(this);
   }
@@ -3082,7 +3957,15 @@ class _$ErrorConvertCurrencyStateImpl<T>
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (errorConvertCurrencyState != null) {
@@ -3100,6 +3983,718 @@ abstract class ErrorConvertCurrencyState<T> implements HomeState<T> {
   @JsonKey(ignore: true)
   _$$ErrorConvertCurrencyStateImplCopyWith<T,
           _$ErrorConvertCurrencyStateImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadingHistoryCurrencyStateImplCopyWith<T, $Res> {
+  factory _$$LoadingHistoryCurrencyStateImplCopyWith(
+          _$LoadingHistoryCurrencyStateImpl<T> value,
+          $Res Function(_$LoadingHistoryCurrencyStateImpl<T>) then) =
+      __$$LoadingHistoryCurrencyStateImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$LoadingHistoryCurrencyStateImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res,
+        _$LoadingHistoryCurrencyStateImpl<T>>
+    implements _$$LoadingHistoryCurrencyStateImplCopyWith<T, $Res> {
+  __$$LoadingHistoryCurrencyStateImplCopyWithImpl(
+      _$LoadingHistoryCurrencyStateImpl<T> _value,
+      $Res Function(_$LoadingHistoryCurrencyStateImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingHistoryCurrencyStateImpl<T>
+    implements LoadingHistoryCurrencyState<T> {
+  const _$LoadingHistoryCurrencyStateImpl();
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.loadingHistoryCurrencyState()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadingHistoryCurrencyStateImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
+    required TResult Function(String error) errorGetCurrencies,
+    required TResult Function() changeCurrencyFromState,
+    required TResult Function() changeCurrencyToState,
+    required TResult Function() swapCurrencyState,
+    required TResult Function() loadingConvertCurrencyState,
+    required TResult Function(double currencies) successConvertCurrencyState,
+    required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
+    required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
+  }) {
+    return loadingHistoryCurrencyState();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
+    TResult? Function(String error)? errorGetCurrencies,
+    TResult? Function()? changeCurrencyFromState,
+    TResult? Function()? changeCurrencyToState,
+    TResult? Function()? swapCurrencyState,
+    TResult? Function()? loadingConvertCurrencyState,
+    TResult? Function(double currencies)? successConvertCurrencyState,
+    TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
+    TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
+  }) {
+    return loadingHistoryCurrencyState?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
+    TResult Function(String error)? errorGetCurrencies,
+    TResult Function()? changeCurrencyFromState,
+    TResult Function()? changeCurrencyToState,
+    TResult Function()? swapCurrencyState,
+    TResult Function()? loadingConvertCurrencyState,
+    TResult Function(double currencies)? successConvertCurrencyState,
+    TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
+    TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
+    required TResult orElse(),
+  }) {
+    if (loadingHistoryCurrencyState != null) {
+      return loadingHistoryCurrencyState();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(LoadingGetCurrencies<T> value)
+        loadingGetCurrencies,
+    required TResult Function(SuccessGetCurrencies<T> value)
+        successGetCurrencies,
+    required TResult Function(ErrorGetCurrencies<T> value) errorGetCurrencies,
+    required TResult Function(ChangeCurrencyFromState<T> value)
+        changeCurrencyFromState,
+    required TResult Function(ChangeCurrencyToState<T> value)
+        changeCurrencyToState,
+    required TResult Function(SwapCurrencyState<T> value) swapCurrencyState,
+    required TResult Function(LoadingConvertCurrencyState<T> value)
+        loadingConvertCurrencyState,
+    required TResult Function(SuccessConvertCurrencyState<T> value)
+        successConvertCurrencyState,
+    required TResult Function(ErrorConvertCurrencyState<T> value)
+        errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
+    required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
+  }) {
+    return loadingHistoryCurrencyState(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(LoadingGetCurrencies<T> value)? loadingGetCurrencies,
+    TResult? Function(SuccessGetCurrencies<T> value)? successGetCurrencies,
+    TResult? Function(ErrorGetCurrencies<T> value)? errorGetCurrencies,
+    TResult? Function(ChangeCurrencyFromState<T> value)?
+        changeCurrencyFromState,
+    TResult? Function(ChangeCurrencyToState<T> value)? changeCurrencyToState,
+    TResult? Function(SwapCurrencyState<T> value)? swapCurrencyState,
+    TResult? Function(LoadingConvertCurrencyState<T> value)?
+        loadingConvertCurrencyState,
+    TResult? Function(SuccessConvertCurrencyState<T> value)?
+        successConvertCurrencyState,
+    TResult? Function(ErrorConvertCurrencyState<T> value)?
+        errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
+    TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
+  }) {
+    return loadingHistoryCurrencyState?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(LoadingGetCurrencies<T> value)? loadingGetCurrencies,
+    TResult Function(SuccessGetCurrencies<T> value)? successGetCurrencies,
+    TResult Function(ErrorGetCurrencies<T> value)? errorGetCurrencies,
+    TResult Function(ChangeCurrencyFromState<T> value)? changeCurrencyFromState,
+    TResult Function(ChangeCurrencyToState<T> value)? changeCurrencyToState,
+    TResult Function(SwapCurrencyState<T> value)? swapCurrencyState,
+    TResult Function(LoadingConvertCurrencyState<T> value)?
+        loadingConvertCurrencyState,
+    TResult Function(SuccessConvertCurrencyState<T> value)?
+        successConvertCurrencyState,
+    TResult Function(ErrorConvertCurrencyState<T> value)?
+        errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
+    TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
+    required TResult orElse(),
+  }) {
+    if (loadingHistoryCurrencyState != null) {
+      return loadingHistoryCurrencyState(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoadingHistoryCurrencyState<T> implements HomeState<T> {
+  const factory LoadingHistoryCurrencyState() =
+      _$LoadingHistoryCurrencyStateImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$SuccessHistoryCurrencyStateImplCopyWith<T, $Res> {
+  factory _$$SuccessHistoryCurrencyStateImplCopyWith(
+          _$SuccessHistoryCurrencyStateImpl<T> value,
+          $Res Function(_$SuccessHistoryCurrencyStateImpl<T>) then) =
+      __$$SuccessHistoryCurrencyStateImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({HistoryCurrencyEntity currencies});
+}
+
+/// @nodoc
+class __$$SuccessHistoryCurrencyStateImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res,
+        _$SuccessHistoryCurrencyStateImpl<T>>
+    implements _$$SuccessHistoryCurrencyStateImplCopyWith<T, $Res> {
+  __$$SuccessHistoryCurrencyStateImplCopyWithImpl(
+      _$SuccessHistoryCurrencyStateImpl<T> _value,
+      $Res Function(_$SuccessHistoryCurrencyStateImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? currencies = null,
+  }) {
+    return _then(_$SuccessHistoryCurrencyStateImpl<T>(
+      null == currencies
+          ? _value.currencies
+          : currencies // ignore: cast_nullable_to_non_nullable
+              as HistoryCurrencyEntity,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SuccessHistoryCurrencyStateImpl<T>
+    implements SuccessHistoryCurrencyState<T> {
+  const _$SuccessHistoryCurrencyStateImpl(this.currencies);
+
+  @override
+  final HistoryCurrencyEntity currencies;
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.successHistoryCurrencyState(currencies: $currencies)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SuccessHistoryCurrencyStateImpl<T> &&
+            (identical(other.currencies, currencies) ||
+                other.currencies == currencies));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, currencies);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SuccessHistoryCurrencyStateImplCopyWith<T,
+          _$SuccessHistoryCurrencyStateImpl<T>>
+      get copyWith => __$$SuccessHistoryCurrencyStateImplCopyWithImpl<T,
+          _$SuccessHistoryCurrencyStateImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
+    required TResult Function(String error) errorGetCurrencies,
+    required TResult Function() changeCurrencyFromState,
+    required TResult Function() changeCurrencyToState,
+    required TResult Function() swapCurrencyState,
+    required TResult Function() loadingConvertCurrencyState,
+    required TResult Function(double currencies) successConvertCurrencyState,
+    required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
+    required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
+  }) {
+    return successHistoryCurrencyState(currencies);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
+    TResult? Function(String error)? errorGetCurrencies,
+    TResult? Function()? changeCurrencyFromState,
+    TResult? Function()? changeCurrencyToState,
+    TResult? Function()? swapCurrencyState,
+    TResult? Function()? loadingConvertCurrencyState,
+    TResult? Function(double currencies)? successConvertCurrencyState,
+    TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
+    TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
+  }) {
+    return successHistoryCurrencyState?.call(currencies);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
+    TResult Function(String error)? errorGetCurrencies,
+    TResult Function()? changeCurrencyFromState,
+    TResult Function()? changeCurrencyToState,
+    TResult Function()? swapCurrencyState,
+    TResult Function()? loadingConvertCurrencyState,
+    TResult Function(double currencies)? successConvertCurrencyState,
+    TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
+    TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
+    required TResult orElse(),
+  }) {
+    if (successHistoryCurrencyState != null) {
+      return successHistoryCurrencyState(currencies);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(LoadingGetCurrencies<T> value)
+        loadingGetCurrencies,
+    required TResult Function(SuccessGetCurrencies<T> value)
+        successGetCurrencies,
+    required TResult Function(ErrorGetCurrencies<T> value) errorGetCurrencies,
+    required TResult Function(ChangeCurrencyFromState<T> value)
+        changeCurrencyFromState,
+    required TResult Function(ChangeCurrencyToState<T> value)
+        changeCurrencyToState,
+    required TResult Function(SwapCurrencyState<T> value) swapCurrencyState,
+    required TResult Function(LoadingConvertCurrencyState<T> value)
+        loadingConvertCurrencyState,
+    required TResult Function(SuccessConvertCurrencyState<T> value)
+        successConvertCurrencyState,
+    required TResult Function(ErrorConvertCurrencyState<T> value)
+        errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
+    required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
+  }) {
+    return successHistoryCurrencyState(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(LoadingGetCurrencies<T> value)? loadingGetCurrencies,
+    TResult? Function(SuccessGetCurrencies<T> value)? successGetCurrencies,
+    TResult? Function(ErrorGetCurrencies<T> value)? errorGetCurrencies,
+    TResult? Function(ChangeCurrencyFromState<T> value)?
+        changeCurrencyFromState,
+    TResult? Function(ChangeCurrencyToState<T> value)? changeCurrencyToState,
+    TResult? Function(SwapCurrencyState<T> value)? swapCurrencyState,
+    TResult? Function(LoadingConvertCurrencyState<T> value)?
+        loadingConvertCurrencyState,
+    TResult? Function(SuccessConvertCurrencyState<T> value)?
+        successConvertCurrencyState,
+    TResult? Function(ErrorConvertCurrencyState<T> value)?
+        errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
+    TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
+  }) {
+    return successHistoryCurrencyState?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(LoadingGetCurrencies<T> value)? loadingGetCurrencies,
+    TResult Function(SuccessGetCurrencies<T> value)? successGetCurrencies,
+    TResult Function(ErrorGetCurrencies<T> value)? errorGetCurrencies,
+    TResult Function(ChangeCurrencyFromState<T> value)? changeCurrencyFromState,
+    TResult Function(ChangeCurrencyToState<T> value)? changeCurrencyToState,
+    TResult Function(SwapCurrencyState<T> value)? swapCurrencyState,
+    TResult Function(LoadingConvertCurrencyState<T> value)?
+        loadingConvertCurrencyState,
+    TResult Function(SuccessConvertCurrencyState<T> value)?
+        successConvertCurrencyState,
+    TResult Function(ErrorConvertCurrencyState<T> value)?
+        errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
+    TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
+    required TResult orElse(),
+  }) {
+    if (successHistoryCurrencyState != null) {
+      return successHistoryCurrencyState(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SuccessHistoryCurrencyState<T> implements HomeState<T> {
+  const factory SuccessHistoryCurrencyState(
+          final HistoryCurrencyEntity currencies) =
+      _$SuccessHistoryCurrencyStateImpl<T>;
+
+  HistoryCurrencyEntity get currencies;
+  @JsonKey(ignore: true)
+  _$$SuccessHistoryCurrencyStateImplCopyWith<T,
+          _$SuccessHistoryCurrencyStateImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ErrorHistoryCurrencyStateImplCopyWith<T, $Res> {
+  factory _$$ErrorHistoryCurrencyStateImplCopyWith(
+          _$ErrorHistoryCurrencyStateImpl<T> value,
+          $Res Function(_$ErrorHistoryCurrencyStateImpl<T>) then) =
+      __$$ErrorHistoryCurrencyStateImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$ErrorHistoryCurrencyStateImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$ErrorHistoryCurrencyStateImpl<T>>
+    implements _$$ErrorHistoryCurrencyStateImplCopyWith<T, $Res> {
+  __$$ErrorHistoryCurrencyStateImplCopyWithImpl(
+      _$ErrorHistoryCurrencyStateImpl<T> _value,
+      $Res Function(_$ErrorHistoryCurrencyStateImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$ErrorHistoryCurrencyStateImpl<T>(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErrorHistoryCurrencyStateImpl<T>
+    implements ErrorHistoryCurrencyState<T> {
+  const _$ErrorHistoryCurrencyStateImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.errorHistoryCurrencyState(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorHistoryCurrencyStateImpl<T> &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorHistoryCurrencyStateImplCopyWith<T,
+          _$ErrorHistoryCurrencyStateImpl<T>>
+      get copyWith => __$$ErrorHistoryCurrencyStateImplCopyWithImpl<T,
+          _$ErrorHistoryCurrencyStateImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
+    required TResult Function(String error) errorGetCurrencies,
+    required TResult Function() changeCurrencyFromState,
+    required TResult Function() changeCurrencyToState,
+    required TResult Function() swapCurrencyState,
+    required TResult Function() loadingConvertCurrencyState,
+    required TResult Function(double currencies) successConvertCurrencyState,
+    required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
+    required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
+  }) {
+    return errorHistoryCurrencyState(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
+    TResult? Function(String error)? errorGetCurrencies,
+    TResult? Function()? changeCurrencyFromState,
+    TResult? Function()? changeCurrencyToState,
+    TResult? Function()? swapCurrencyState,
+    TResult? Function()? loadingConvertCurrencyState,
+    TResult? Function(double currencies)? successConvertCurrencyState,
+    TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
+    TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
+  }) {
+    return errorHistoryCurrencyState?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
+    TResult Function(String error)? errorGetCurrencies,
+    TResult Function()? changeCurrencyFromState,
+    TResult Function()? changeCurrencyToState,
+    TResult Function()? swapCurrencyState,
+    TResult Function()? loadingConvertCurrencyState,
+    TResult Function(double currencies)? successConvertCurrencyState,
+    TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
+    TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
+    required TResult orElse(),
+  }) {
+    if (errorHistoryCurrencyState != null) {
+      return errorHistoryCurrencyState(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(LoadingGetCurrencies<T> value)
+        loadingGetCurrencies,
+    required TResult Function(SuccessGetCurrencies<T> value)
+        successGetCurrencies,
+    required TResult Function(ErrorGetCurrencies<T> value) errorGetCurrencies,
+    required TResult Function(ChangeCurrencyFromState<T> value)
+        changeCurrencyFromState,
+    required TResult Function(ChangeCurrencyToState<T> value)
+        changeCurrencyToState,
+    required TResult Function(SwapCurrencyState<T> value) swapCurrencyState,
+    required TResult Function(LoadingConvertCurrencyState<T> value)
+        loadingConvertCurrencyState,
+    required TResult Function(SuccessConvertCurrencyState<T> value)
+        successConvertCurrencyState,
+    required TResult Function(ErrorConvertCurrencyState<T> value)
+        errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
+    required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
+  }) {
+    return errorHistoryCurrencyState(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(LoadingGetCurrencies<T> value)? loadingGetCurrencies,
+    TResult? Function(SuccessGetCurrencies<T> value)? successGetCurrencies,
+    TResult? Function(ErrorGetCurrencies<T> value)? errorGetCurrencies,
+    TResult? Function(ChangeCurrencyFromState<T> value)?
+        changeCurrencyFromState,
+    TResult? Function(ChangeCurrencyToState<T> value)? changeCurrencyToState,
+    TResult? Function(SwapCurrencyState<T> value)? swapCurrencyState,
+    TResult? Function(LoadingConvertCurrencyState<T> value)?
+        loadingConvertCurrencyState,
+    TResult? Function(SuccessConvertCurrencyState<T> value)?
+        successConvertCurrencyState,
+    TResult? Function(ErrorConvertCurrencyState<T> value)?
+        errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
+    TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
+  }) {
+    return errorHistoryCurrencyState?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(LoadingGetCurrencies<T> value)? loadingGetCurrencies,
+    TResult Function(SuccessGetCurrencies<T> value)? successGetCurrencies,
+    TResult Function(ErrorGetCurrencies<T> value)? errorGetCurrencies,
+    TResult Function(ChangeCurrencyFromState<T> value)? changeCurrencyFromState,
+    TResult Function(ChangeCurrencyToState<T> value)? changeCurrencyToState,
+    TResult Function(SwapCurrencyState<T> value)? swapCurrencyState,
+    TResult Function(LoadingConvertCurrencyState<T> value)?
+        loadingConvertCurrencyState,
+    TResult Function(SuccessConvertCurrencyState<T> value)?
+        successConvertCurrencyState,
+    TResult Function(ErrorConvertCurrencyState<T> value)?
+        errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
+    TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
+    required TResult orElse(),
+  }) {
+    if (errorHistoryCurrencyState != null) {
+      return errorHistoryCurrencyState(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ErrorHistoryCurrencyState<T> implements HomeState<T> {
+  const factory ErrorHistoryCurrencyState({required final String error}) =
+      _$ErrorHistoryCurrencyStateImpl<T>;
+
+  String get error;
+  @JsonKey(ignore: true)
+  _$$ErrorHistoryCurrencyStateImplCopyWith<T,
+          _$ErrorHistoryCurrencyStateImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3151,7 +4746,12 @@ class _$ClearFormStateImpl<T> implements ClearFormState<T> {
     required TResult Function() loadingConvertCurrencyState,
     required TResult Function(double currencies) successConvertCurrencyState,
     required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
     required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
   }) {
     return clearFormState();
   }
@@ -3169,7 +4769,12 @@ class _$ClearFormStateImpl<T> implements ClearFormState<T> {
     TResult? Function()? loadingConvertCurrencyState,
     TResult? Function(double currencies)? successConvertCurrencyState,
     TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
     TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
   }) {
     return clearFormState?.call();
   }
@@ -3187,7 +4792,12 @@ class _$ClearFormStateImpl<T> implements ClearFormState<T> {
     TResult Function()? loadingConvertCurrencyState,
     TResult Function(double currencies)? successConvertCurrencyState,
     TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
     TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (clearFormState != null) {
@@ -3216,7 +4826,15 @@ class _$ClearFormStateImpl<T> implements ClearFormState<T> {
         successConvertCurrencyState,
     required TResult Function(ErrorConvertCurrencyState<T> value)
         errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
     required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
   }) {
     return clearFormState(this);
   }
@@ -3238,7 +4856,15 @@ class _$ClearFormStateImpl<T> implements ClearFormState<T> {
         successConvertCurrencyState,
     TResult? Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
   }) {
     return clearFormState?.call(this);
   }
@@ -3259,7 +4885,15 @@ class _$ClearFormStateImpl<T> implements ClearFormState<T> {
         successConvertCurrencyState,
     TResult Function(ErrorConvertCurrencyState<T> value)?
         errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
     TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
     required TResult orElse(),
   }) {
     if (clearFormState != null) {
@@ -3271,4 +4905,219 @@ class _$ClearFormStateImpl<T> implements ClearFormState<T> {
 
 abstract class ClearFormState<T> implements HomeState<T> {
   const factory ClearFormState() = _$ClearFormStateImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$ExpandedExpansionPanelStateImplCopyWith<T, $Res> {
+  factory _$$ExpandedExpansionPanelStateImplCopyWith(
+          _$ExpandedExpansionPanelStateImpl<T> value,
+          $Res Function(_$ExpandedExpansionPanelStateImpl<T>) then) =
+      __$$ExpandedExpansionPanelStateImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$ExpandedExpansionPanelStateImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res,
+        _$ExpandedExpansionPanelStateImpl<T>>
+    implements _$$ExpandedExpansionPanelStateImplCopyWith<T, $Res> {
+  __$$ExpandedExpansionPanelStateImplCopyWithImpl(
+      _$ExpandedExpansionPanelStateImpl<T> _value,
+      $Res Function(_$ExpandedExpansionPanelStateImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ExpandedExpansionPanelStateImpl<T>
+    implements ExpandedExpansionPanelState<T> {
+  const _$ExpandedExpansionPanelStateImpl();
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.expandedExpansionPanelState()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ExpandedExpansionPanelStateImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
+    required TResult Function(String error) errorGetCurrencies,
+    required TResult Function() changeCurrencyFromState,
+    required TResult Function() changeCurrencyToState,
+    required TResult Function() swapCurrencyState,
+    required TResult Function() loadingConvertCurrencyState,
+    required TResult Function(double currencies) successConvertCurrencyState,
+    required TResult Function(String error) errorConvertCurrencyState,
+    required TResult Function() loadingHistoryCurrencyState,
+    required TResult Function(HistoryCurrencyEntity currencies)
+        successHistoryCurrencyState,
+    required TResult Function(String error) errorHistoryCurrencyState,
+    required TResult Function() clearFormState,
+    required TResult Function() expandedExpansionPanelState,
+  }) {
+    return expandedExpansionPanelState();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
+    TResult? Function(String error)? errorGetCurrencies,
+    TResult? Function()? changeCurrencyFromState,
+    TResult? Function()? changeCurrencyToState,
+    TResult? Function()? swapCurrencyState,
+    TResult? Function()? loadingConvertCurrencyState,
+    TResult? Function(double currencies)? successConvertCurrencyState,
+    TResult? Function(String error)? errorConvertCurrencyState,
+    TResult? Function()? loadingHistoryCurrencyState,
+    TResult? Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult? Function(String error)? errorHistoryCurrencyState,
+    TResult? Function()? clearFormState,
+    TResult? Function()? expandedExpansionPanelState,
+  }) {
+    return expandedExpansionPanelState?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
+    TResult Function(String error)? errorGetCurrencies,
+    TResult Function()? changeCurrencyFromState,
+    TResult Function()? changeCurrencyToState,
+    TResult Function()? swapCurrencyState,
+    TResult Function()? loadingConvertCurrencyState,
+    TResult Function(double currencies)? successConvertCurrencyState,
+    TResult Function(String error)? errorConvertCurrencyState,
+    TResult Function()? loadingHistoryCurrencyState,
+    TResult Function(HistoryCurrencyEntity currencies)?
+        successHistoryCurrencyState,
+    TResult Function(String error)? errorHistoryCurrencyState,
+    TResult Function()? clearFormState,
+    TResult Function()? expandedExpansionPanelState,
+    required TResult orElse(),
+  }) {
+    if (expandedExpansionPanelState != null) {
+      return expandedExpansionPanelState();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(LoadingGetCurrencies<T> value)
+        loadingGetCurrencies,
+    required TResult Function(SuccessGetCurrencies<T> value)
+        successGetCurrencies,
+    required TResult Function(ErrorGetCurrencies<T> value) errorGetCurrencies,
+    required TResult Function(ChangeCurrencyFromState<T> value)
+        changeCurrencyFromState,
+    required TResult Function(ChangeCurrencyToState<T> value)
+        changeCurrencyToState,
+    required TResult Function(SwapCurrencyState<T> value) swapCurrencyState,
+    required TResult Function(LoadingConvertCurrencyState<T> value)
+        loadingConvertCurrencyState,
+    required TResult Function(SuccessConvertCurrencyState<T> value)
+        successConvertCurrencyState,
+    required TResult Function(ErrorConvertCurrencyState<T> value)
+        errorConvertCurrencyState,
+    required TResult Function(LoadingHistoryCurrencyState<T> value)
+        loadingHistoryCurrencyState,
+    required TResult Function(SuccessHistoryCurrencyState<T> value)
+        successHistoryCurrencyState,
+    required TResult Function(ErrorHistoryCurrencyState<T> value)
+        errorHistoryCurrencyState,
+    required TResult Function(ClearFormState<T> value) clearFormState,
+    required TResult Function(ExpandedExpansionPanelState<T> value)
+        expandedExpansionPanelState,
+  }) {
+    return expandedExpansionPanelState(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(LoadingGetCurrencies<T> value)? loadingGetCurrencies,
+    TResult? Function(SuccessGetCurrencies<T> value)? successGetCurrencies,
+    TResult? Function(ErrorGetCurrencies<T> value)? errorGetCurrencies,
+    TResult? Function(ChangeCurrencyFromState<T> value)?
+        changeCurrencyFromState,
+    TResult? Function(ChangeCurrencyToState<T> value)? changeCurrencyToState,
+    TResult? Function(SwapCurrencyState<T> value)? swapCurrencyState,
+    TResult? Function(LoadingConvertCurrencyState<T> value)?
+        loadingConvertCurrencyState,
+    TResult? Function(SuccessConvertCurrencyState<T> value)?
+        successConvertCurrencyState,
+    TResult? Function(ErrorConvertCurrencyState<T> value)?
+        errorConvertCurrencyState,
+    TResult? Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult? Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult? Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
+    TResult? Function(ClearFormState<T> value)? clearFormState,
+    TResult? Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
+  }) {
+    return expandedExpansionPanelState?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(LoadingGetCurrencies<T> value)? loadingGetCurrencies,
+    TResult Function(SuccessGetCurrencies<T> value)? successGetCurrencies,
+    TResult Function(ErrorGetCurrencies<T> value)? errorGetCurrencies,
+    TResult Function(ChangeCurrencyFromState<T> value)? changeCurrencyFromState,
+    TResult Function(ChangeCurrencyToState<T> value)? changeCurrencyToState,
+    TResult Function(SwapCurrencyState<T> value)? swapCurrencyState,
+    TResult Function(LoadingConvertCurrencyState<T> value)?
+        loadingConvertCurrencyState,
+    TResult Function(SuccessConvertCurrencyState<T> value)?
+        successConvertCurrencyState,
+    TResult Function(ErrorConvertCurrencyState<T> value)?
+        errorConvertCurrencyState,
+    TResult Function(LoadingHistoryCurrencyState<T> value)?
+        loadingHistoryCurrencyState,
+    TResult Function(SuccessHistoryCurrencyState<T> value)?
+        successHistoryCurrencyState,
+    TResult Function(ErrorHistoryCurrencyState<T> value)?
+        errorHistoryCurrencyState,
+    TResult Function(ClearFormState<T> value)? clearFormState,
+    TResult Function(ExpandedExpansionPanelState<T> value)?
+        expandedExpansionPanelState,
+    required TResult orElse(),
+  }) {
+    if (expandedExpansionPanelState != null) {
+      return expandedExpansionPanelState(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ExpandedExpansionPanelState<T> implements HomeState<T> {
+  const factory ExpandedExpansionPanelState() =
+      _$ExpandedExpansionPanelStateImpl<T>;
 }
