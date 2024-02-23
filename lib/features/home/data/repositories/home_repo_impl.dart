@@ -14,7 +14,7 @@ class HomeRepositoriesImpl extends HomeRepositories {
   Future<ApiResult> fetchAllCurrencies() async {
     try {
       final localCurrencies = homeLocalDataSource.fetchAllCurrencies();
-      if(localCurrencies.isNotEmpty) {
+      if(localCurrencies.results?.isNotEmpty == true) {
         return ApiResult.success(localCurrencies);
       }
       final response = await homeRemoteDataSource.fetchAllCurrencies();

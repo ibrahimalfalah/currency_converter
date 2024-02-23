@@ -20,8 +20,8 @@ mixin _$HomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getCurrenciesEvent,
-    required TResult Function(String value) changeCurrencyFromEvent,
-    required TResult Function(String value) changeCurrencyToEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyFromEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
     required TResult Function() clearFormEvent,
@@ -31,8 +31,8 @@ mixin _$HomeEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getCurrenciesEvent,
-    TResult? Function(String value)? changeCurrencyFromEvent,
-    TResult? Function(String value)? changeCurrencyToEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
     TResult? Function()? clearFormEvent,
@@ -42,8 +42,8 @@ mixin _$HomeEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getCurrenciesEvent,
-    TResult Function(String value)? changeCurrencyFromEvent,
-    TResult Function(String value)? changeCurrencyToEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
     TResult Function()? clearFormEvent,
@@ -145,8 +145,8 @@ class _$StartedImpl implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getCurrenciesEvent,
-    required TResult Function(String value) changeCurrencyFromEvent,
-    required TResult Function(String value) changeCurrencyToEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyFromEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
     required TResult Function() clearFormEvent,
@@ -159,8 +159,8 @@ class _$StartedImpl implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getCurrenciesEvent,
-    TResult? Function(String value)? changeCurrencyFromEvent,
-    TResult? Function(String value)? changeCurrencyToEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
     TResult? Function()? clearFormEvent,
@@ -173,8 +173,8 @@ class _$StartedImpl implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getCurrenciesEvent,
-    TResult Function(String value)? changeCurrencyFromEvent,
-    TResult Function(String value)? changeCurrencyToEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
     TResult Function()? clearFormEvent,
@@ -279,8 +279,8 @@ class _$GetCurrenciesEventImpl implements GetCurrenciesEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getCurrenciesEvent,
-    required TResult Function(String value) changeCurrencyFromEvent,
-    required TResult Function(String value) changeCurrencyToEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyFromEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
     required TResult Function() clearFormEvent,
@@ -293,8 +293,8 @@ class _$GetCurrenciesEventImpl implements GetCurrenciesEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getCurrenciesEvent,
-    TResult? Function(String value)? changeCurrencyFromEvent,
-    TResult? Function(String value)? changeCurrencyToEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
     TResult? Function()? clearFormEvent,
@@ -307,8 +307,8 @@ class _$GetCurrenciesEventImpl implements GetCurrenciesEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getCurrenciesEvent,
-    TResult Function(String value)? changeCurrencyFromEvent,
-    TResult Function(String value)? changeCurrencyToEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
     TResult Function()? clearFormEvent,
@@ -380,7 +380,7 @@ abstract class _$$ChangeCurrencyFromEventImplCopyWith<$Res> {
           $Res Function(_$ChangeCurrencyFromEventImpl) then) =
       __$$ChangeCurrencyFromEventImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String value});
+  $Res call({CurrencyInfoEntity value});
 }
 
 /// @nodoc
@@ -401,7 +401,7 @@ class __$$ChangeCurrencyFromEventImplCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
+              as CurrencyInfoEntity,
     ));
   }
 }
@@ -412,7 +412,7 @@ class _$ChangeCurrencyFromEventImpl implements ChangeCurrencyFromEvent {
   const _$ChangeCurrencyFromEventImpl({required this.value});
 
   @override
-  final String value;
+  final CurrencyInfoEntity value;
 
   @override
   String toString() {
@@ -442,8 +442,8 @@ class _$ChangeCurrencyFromEventImpl implements ChangeCurrencyFromEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getCurrenciesEvent,
-    required TResult Function(String value) changeCurrencyFromEvent,
-    required TResult Function(String value) changeCurrencyToEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyFromEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
     required TResult Function() clearFormEvent,
@@ -456,8 +456,8 @@ class _$ChangeCurrencyFromEventImpl implements ChangeCurrencyFromEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getCurrenciesEvent,
-    TResult? Function(String value)? changeCurrencyFromEvent,
-    TResult? Function(String value)? changeCurrencyToEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
     TResult? Function()? clearFormEvent,
@@ -470,8 +470,8 @@ class _$ChangeCurrencyFromEventImpl implements ChangeCurrencyFromEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getCurrenciesEvent,
-    TResult Function(String value)? changeCurrencyFromEvent,
-    TResult Function(String value)? changeCurrencyToEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
     TResult Function()? clearFormEvent,
@@ -533,10 +533,11 @@ class _$ChangeCurrencyFromEventImpl implements ChangeCurrencyFromEvent {
 }
 
 abstract class ChangeCurrencyFromEvent implements HomeEvent {
-  const factory ChangeCurrencyFromEvent({required final String value}) =
+  const factory ChangeCurrencyFromEvent(
+          {required final CurrencyInfoEntity value}) =
       _$ChangeCurrencyFromEventImpl;
 
-  String get value;
+  CurrencyInfoEntity get value;
   @JsonKey(ignore: true)
   _$$ChangeCurrencyFromEventImplCopyWith<_$ChangeCurrencyFromEventImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -549,7 +550,7 @@ abstract class _$$ChangeCurrencyToEventImplCopyWith<$Res> {
           $Res Function(_$ChangeCurrencyToEventImpl) then) =
       __$$ChangeCurrencyToEventImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String value});
+  $Res call({CurrencyInfoEntity value});
 }
 
 /// @nodoc
@@ -569,7 +570,7 @@ class __$$ChangeCurrencyToEventImplCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
+              as CurrencyInfoEntity,
     ));
   }
 }
@@ -580,7 +581,7 @@ class _$ChangeCurrencyToEventImpl implements ChangeCurrencyToEvent {
   const _$ChangeCurrencyToEventImpl({required this.value});
 
   @override
-  final String value;
+  final CurrencyInfoEntity value;
 
   @override
   String toString() {
@@ -610,8 +611,8 @@ class _$ChangeCurrencyToEventImpl implements ChangeCurrencyToEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getCurrenciesEvent,
-    required TResult Function(String value) changeCurrencyFromEvent,
-    required TResult Function(String value) changeCurrencyToEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyFromEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
     required TResult Function() clearFormEvent,
@@ -624,8 +625,8 @@ class _$ChangeCurrencyToEventImpl implements ChangeCurrencyToEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getCurrenciesEvent,
-    TResult? Function(String value)? changeCurrencyFromEvent,
-    TResult? Function(String value)? changeCurrencyToEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
     TResult? Function()? clearFormEvent,
@@ -638,8 +639,8 @@ class _$ChangeCurrencyToEventImpl implements ChangeCurrencyToEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getCurrenciesEvent,
-    TResult Function(String value)? changeCurrencyFromEvent,
-    TResult Function(String value)? changeCurrencyToEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
     TResult Function()? clearFormEvent,
@@ -701,10 +702,10 @@ class _$ChangeCurrencyToEventImpl implements ChangeCurrencyToEvent {
 }
 
 abstract class ChangeCurrencyToEvent implements HomeEvent {
-  const factory ChangeCurrencyToEvent({required final String value}) =
-      _$ChangeCurrencyToEventImpl;
+  const factory ChangeCurrencyToEvent(
+      {required final CurrencyInfoEntity value}) = _$ChangeCurrencyToEventImpl;
 
-  String get value;
+  CurrencyInfoEntity get value;
   @JsonKey(ignore: true)
   _$$ChangeCurrencyToEventImplCopyWith<_$ChangeCurrencyToEventImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -750,8 +751,8 @@ class _$SwapCurrencyEventImpl implements SwapCurrencyEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getCurrenciesEvent,
-    required TResult Function(String value) changeCurrencyFromEvent,
-    required TResult Function(String value) changeCurrencyToEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyFromEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
     required TResult Function() clearFormEvent,
@@ -764,8 +765,8 @@ class _$SwapCurrencyEventImpl implements SwapCurrencyEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getCurrenciesEvent,
-    TResult? Function(String value)? changeCurrencyFromEvent,
-    TResult? Function(String value)? changeCurrencyToEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
     TResult? Function()? clearFormEvent,
@@ -778,8 +779,8 @@ class _$SwapCurrencyEventImpl implements SwapCurrencyEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getCurrenciesEvent,
-    TResult Function(String value)? changeCurrencyFromEvent,
-    TResult Function(String value)? changeCurrencyToEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
     TResult Function()? clearFormEvent,
@@ -885,8 +886,8 @@ class _$ConvertCurrencyEventImpl implements ConvertCurrencyEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getCurrenciesEvent,
-    required TResult Function(String value) changeCurrencyFromEvent,
-    required TResult Function(String value) changeCurrencyToEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyFromEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
     required TResult Function() clearFormEvent,
@@ -899,8 +900,8 @@ class _$ConvertCurrencyEventImpl implements ConvertCurrencyEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getCurrenciesEvent,
-    TResult? Function(String value)? changeCurrencyFromEvent,
-    TResult? Function(String value)? changeCurrencyToEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
     TResult? Function()? clearFormEvent,
@@ -913,8 +914,8 @@ class _$ConvertCurrencyEventImpl implements ConvertCurrencyEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getCurrenciesEvent,
-    TResult Function(String value)? changeCurrencyFromEvent,
-    TResult Function(String value)? changeCurrencyToEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
     TResult Function()? clearFormEvent,
@@ -1019,8 +1020,8 @@ class _$ClearFormEventImpl implements ClearFormEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getCurrenciesEvent,
-    required TResult Function(String value) changeCurrencyFromEvent,
-    required TResult Function(String value) changeCurrencyToEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyFromEvent,
+    required TResult Function(CurrencyInfoEntity value) changeCurrencyToEvent,
     required TResult Function() swapCurrencyEvent,
     required TResult Function() convertCurrencyEvent,
     required TResult Function() clearFormEvent,
@@ -1033,8 +1034,8 @@ class _$ClearFormEventImpl implements ClearFormEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getCurrenciesEvent,
-    TResult? Function(String value)? changeCurrencyFromEvent,
-    TResult? Function(String value)? changeCurrencyToEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult? Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult? Function()? swapCurrencyEvent,
     TResult? Function()? convertCurrencyEvent,
     TResult? Function()? clearFormEvent,
@@ -1047,8 +1048,8 @@ class _$ClearFormEventImpl implements ClearFormEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getCurrenciesEvent,
-    TResult Function(String value)? changeCurrencyFromEvent,
-    TResult Function(String value)? changeCurrencyToEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyFromEvent,
+    TResult Function(CurrencyInfoEntity value)? changeCurrencyToEvent,
     TResult Function()? swapCurrencyEvent,
     TResult Function()? convertCurrencyEvent,
     TResult Function()? clearFormEvent,
@@ -1119,7 +1120,7 @@ mixin _$HomeState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -1134,7 +1135,7 @@ mixin _$HomeState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -1149,7 +1150,7 @@ mixin _$HomeState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,
@@ -1281,7 +1282,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -1299,7 +1300,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -1317,7 +1318,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,
@@ -1453,7 +1454,7 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -1471,7 +1472,7 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -1489,7 +1490,7 @@ class _$LoadingGetCurrenciesImpl<T> implements LoadingGetCurrencies<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,
@@ -1590,7 +1591,7 @@ abstract class _$$SuccessGetCurrenciesImplCopyWith<T, $Res> {
           $Res Function(_$SuccessGetCurrenciesImpl<T>) then) =
       __$$SuccessGetCurrenciesImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({List<String> currencies});
+  $Res call({CurrencyEntity currencies});
 }
 
 /// @nodoc
@@ -1608,9 +1609,9 @@ class __$$SuccessGetCurrenciesImplCopyWithImpl<T, $Res>
   }) {
     return _then(_$SuccessGetCurrenciesImpl<T>(
       null == currencies
-          ? _value._currencies
+          ? _value.currencies
           : currencies // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as CurrencyEntity,
     ));
   }
 }
@@ -1618,16 +1619,10 @@ class __$$SuccessGetCurrenciesImplCopyWithImpl<T, $Res>
 /// @nodoc
 
 class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
-  const _$SuccessGetCurrenciesImpl(final List<String> currencies)
-      : _currencies = currencies;
+  const _$SuccessGetCurrenciesImpl(this.currencies);
 
-  final List<String> _currencies;
   @override
-  List<String> get currencies {
-    if (_currencies is EqualUnmodifiableListView) return _currencies;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_currencies);
-  }
+  final CurrencyEntity currencies;
 
   @override
   String toString() {
@@ -1639,13 +1634,12 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessGetCurrenciesImpl<T> &&
-            const DeepCollectionEquality()
-                .equals(other._currencies, _currencies));
+            (identical(other.currencies, currencies) ||
+                other.currencies == currencies));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_currencies));
+  int get hashCode => Object.hash(runtimeType, currencies);
 
   @JsonKey(ignore: true)
   @override
@@ -1659,7 +1653,7 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -1677,7 +1671,7 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -1695,7 +1689,7 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,
@@ -1786,10 +1780,10 @@ class _$SuccessGetCurrenciesImpl<T> implements SuccessGetCurrencies<T> {
 }
 
 abstract class SuccessGetCurrencies<T> implements HomeState<T> {
-  const factory SuccessGetCurrencies(final List<String> currencies) =
+  const factory SuccessGetCurrencies(final CurrencyEntity currencies) =
       _$SuccessGetCurrenciesImpl<T>;
 
-  List<String> get currencies;
+  CurrencyEntity get currencies;
   @JsonKey(ignore: true)
   _$$SuccessGetCurrenciesImplCopyWith<T, _$SuccessGetCurrenciesImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
@@ -1862,7 +1856,7 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -1880,7 +1874,7 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -1898,7 +1892,7 @@ class _$ErrorGetCurrenciesImpl<T> implements ErrorGetCurrencies<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,
@@ -2041,7 +2035,7 @@ class _$ChangeCurrencyFromStateImpl<T> implements ChangeCurrencyFromState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -2059,7 +2053,7 @@ class _$ChangeCurrencyFromStateImpl<T> implements ChangeCurrencyFromState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -2077,7 +2071,7 @@ class _$ChangeCurrencyFromStateImpl<T> implements ChangeCurrencyFromState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,
@@ -2214,7 +2208,7 @@ class _$ChangeCurrencyToStateImpl<T> implements ChangeCurrencyToState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -2232,7 +2226,7 @@ class _$ChangeCurrencyToStateImpl<T> implements ChangeCurrencyToState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -2250,7 +2244,7 @@ class _$ChangeCurrencyToStateImpl<T> implements ChangeCurrencyToState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,
@@ -2385,7 +2379,7 @@ class _$SwapCurrencyStateImpl<T> implements SwapCurrencyState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -2403,7 +2397,7 @@ class _$SwapCurrencyStateImpl<T> implements SwapCurrencyState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -2421,7 +2415,7 @@ class _$SwapCurrencyStateImpl<T> implements SwapCurrencyState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,
@@ -2560,7 +2554,7 @@ class _$LoadingConvertCurrencyStateImpl<T>
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -2578,7 +2572,7 @@ class _$LoadingConvertCurrencyStateImpl<T>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -2596,7 +2590,7 @@ class _$LoadingConvertCurrencyStateImpl<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,
@@ -2764,7 +2758,7 @@ class _$SuccessConvertCurrencyStateImpl<T>
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -2782,7 +2776,7 @@ class _$SuccessConvertCurrencyStateImpl<T>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -2800,7 +2794,7 @@ class _$SuccessConvertCurrencyStateImpl<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,
@@ -2972,7 +2966,7 @@ class _$ErrorConvertCurrencyStateImpl<T>
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -2990,7 +2984,7 @@ class _$ErrorConvertCurrencyStateImpl<T>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -3008,7 +3002,7 @@ class _$ErrorConvertCurrencyStateImpl<T>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,
@@ -3149,7 +3143,7 @@ class _$ClearFormStateImpl<T> implements ClearFormState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGetCurrencies,
-    required TResult Function(List<String> currencies) successGetCurrencies,
+    required TResult Function(CurrencyEntity currencies) successGetCurrencies,
     required TResult Function(String error) errorGetCurrencies,
     required TResult Function() changeCurrencyFromState,
     required TResult Function() changeCurrencyToState,
@@ -3167,7 +3161,7 @@ class _$ClearFormStateImpl<T> implements ClearFormState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGetCurrencies,
-    TResult? Function(List<String> currencies)? successGetCurrencies,
+    TResult? Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult? Function(String error)? errorGetCurrencies,
     TResult? Function()? changeCurrencyFromState,
     TResult? Function()? changeCurrencyToState,
@@ -3185,7 +3179,7 @@ class _$ClearFormStateImpl<T> implements ClearFormState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGetCurrencies,
-    TResult Function(List<String> currencies)? successGetCurrencies,
+    TResult Function(CurrencyEntity currencies)? successGetCurrencies,
     TResult Function(String error)? errorGetCurrencies,
     TResult Function()? changeCurrencyFromState,
     TResult Function()? changeCurrencyToState,

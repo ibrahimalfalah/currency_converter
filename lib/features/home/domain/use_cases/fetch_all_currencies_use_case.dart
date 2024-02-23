@@ -1,3 +1,5 @@
+import 'package:currency_converter/features/home/domain/entity/currencies_entity.dart';
+
 import '../../../../core/network/api_error_handler.dart';
 import '../../../../core/network/api_result.dart';
 import '../repositories/home_repo.dart';
@@ -9,7 +11,7 @@ class FetchAllCurrenciesUseCase {
 
   Future<ApiResult> execute() async {
     try {
-      final  currenciesResult =
+      final   currenciesResult =
       await _homeRepositories.fetchAllCurrencies();
       return currenciesResult;
     } catch (error) {

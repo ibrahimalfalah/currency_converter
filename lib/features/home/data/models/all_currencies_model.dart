@@ -1,9 +1,24 @@
-
 import '../../domain/entity/currencies_entity.dart';
 
-class AllCurrenciesModel extends CurrenciesEntity{
+class AllCurrenciesModel extends CurrencyEntity {
+  AllCurrenciesModel({required super.results});
 
-  List<String> ? currencies;
+  factory AllCurrenciesModel.fromJson(Map<String, dynamic> json) {
+    var resultsMap = json['results'] as Map<String, dynamic>;
+    var results = resultsMap.map(
+          (key, value) => MapEntry(
+        key,
+        CurrencyInfoEntity.fromJson(value as Map<String, dynamic>),
+      ),
+    );
 
-  AllCurrenciesModel(this.currencies) : super(currencyNames: currencies);
+    return AllCurrenciesModel(results: results);
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      'results': results?.map((key, value) => MapEntry(key, value.toJson())),
+    };
+  }
 }

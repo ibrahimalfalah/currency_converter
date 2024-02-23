@@ -1,12 +1,13 @@
 import 'package:currency_converter/core/network/api_constants.dart';
-import 'package:currency_converter/features/home/domain/entity/convert_currency_entity.dart';
 import 'package:hive/hive.dart';
 import '../../../../core/helpers/constants.dart';
 import '../../../../core/network/api_service.dart';
+import '../../domain/entity/convert_currency_entity.dart';
 import '../../domain/entity/currencies_entity.dart';
+import '../models/all_currencies_model.dart';
 
 abstract class HomeRemoteDataSource {
-  Future<List<String>> fetchAllCurrencies();
+  Future<AllCurrenciesModel> fetchAllCurrencies();
   Future<double> convertCurrency(String currency);
 }
 
@@ -17,27 +18,16 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   HomeRemoteDataSourceImpl(this._apiService);
 
   @override
-  Future<List<String>> fetchAllCurrencies() async {
+  Future<AllCurrenciesModel> fetchAllCurrencies() async {
     final response = await _apiService.getAllCurrencies();
-    List<String> currencies = getCurrencies(response);
+    AllCurrenciesModel currencies = AllCurrenciesModel.fromJson(response);
     saveData(currencies,kCurrenciesBox);
     return currencies;
   }
 
-  void saveData(List<String> currencies,String boxName) {
-    var box = Hive.box<String>(boxName);
-    box.addAll(currencies);
-  }
-
-  List<String> getCurrencies(response) {
-    CurrenciesEntity currencies = CurrenciesEntity();
-   //currencies.currencyNames = response['results'].keys;
-    // Assuming response['results'].keys is of type _CompactIterable<String>
-    final Iterable<String> keysIterable = response['results'].keys;
-    final List<String> keysList = keysIterable.toList();
-
-    currencies.currencyNames = keysList;
-    return currencies.currencyNames ?? [];
+  void saveData(CurrencyEntity currency,String boxName) {
+    var box = Hive.box<CurrencyEntity>(boxName);
+    box.put(boxName, currency);
   }
 
   @override
@@ -52,5 +42,4 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
     currencyEntity.rate = response[currency];
     return currencyEntity.rate ?? 1;
   }
-
 }

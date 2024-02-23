@@ -1,7 +1,7 @@
 import '../../domain/entity/convert_currency_entity.dart';
 
 class ConvertCurrencyModel extends ConvertCurrencyEntity {
-  double ? rate;
+  double ? rates;
 
-  ConvertCurrencyModel(this.rate) : super(rate:rate);
+  ConvertCurrencyModel(this.rates) : super(rate:rates);
 }

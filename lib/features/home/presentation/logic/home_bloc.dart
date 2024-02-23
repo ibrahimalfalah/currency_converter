@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import '../../domain/entity/currencies_entity.dart';
 import '../../domain/use_cases/convert_currency_use_case.dart';
 import '../../domain/use_cases/fetch_all_currencies_use_case.dart';
 
@@ -26,10 +27,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   final TextEditingController currencyController = TextEditingController();
   final homeFormKey = GlobalKey<FormState>();
-  List<String> allCurrencies = [];
-  String  currencyFrom = '';
-  String  currencyTo = '';
+  // List<String> allCurrencies = [];
+  CurrencyInfoEntity ? currencyFrom;
+  CurrencyInfoEntity ? currencyTo;
   String moneyConverting = '';
+  List<CurrencyInfoEntity> allCurrencies = [];
+  CurrencyEntity currencyEntity = CurrencyEntity();
 
   Future<void> emitGetCurrencies(
       GetCurrenciesEvent event, Emitter<HomeState<dynamic>> emit) async {
@@ -38,7 +41,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
     response.when(
       success: (currencies) {
-        allCurrencies = currencies;
+        allCurrencies = currencies.results?.values.toList();
         emit(HomeState.successGetCurrencies(currencies));
       },
       failure: (errorHandler) {
@@ -62,7 +65,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   emitSwapCurrency(SwapCurrencyEvent event, Emitter<HomeState<dynamic>> emit) {
     emit(const HomeState.initial());
-    String temp = '';
+     CurrencyInfoEntity ? temp ;
     temp = currencyFrom;
     currencyFrom = currencyTo;
     currencyTo = temp;
@@ -72,7 +75,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   emitConvertCurrency(ConvertCurrencyEvent event, Emitter<HomeState<dynamic>> emit) async {
     emit(const HomeState.loadingConvertCurrencyState());
-    final response = await _convertCurrencyUseCase.execute('${currencyFrom}_$currencyTo');
+    final response = await _convertCurrencyUseCase.execute('${currencyFrom!.id}_${currencyTo!.id}');
     response.when(
       success: (rate) {
         moneyConverting = (double.parse(rate.toString())*double.parse(currencyController.text)).toStringAsFixed(3);

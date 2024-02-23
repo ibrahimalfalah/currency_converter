@@ -13,7 +13,7 @@ class HomeBlocListener extends StatelessWidget {
       listener: (context, state) {
         state.whenOrNull(
           successConvertCurrencyState: (rate) {
-            bloc.add(const ClearFormEvent());
+            //bloc.add(const ClearFormEvent());
           },
           errorConvertCurrencyState: (error) {
             setupErrorMessage(error: error, context: context);
