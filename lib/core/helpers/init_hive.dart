@@ -5,6 +5,7 @@ import '../helpers/constants.dart';
 Future<void> setupHive() async {
   /// Register Hive And Open The Box
   await Hive.initFlutter();
-  Hive.registerAdapter(CurrenciesEntityAdapter());
-  await Hive.openBox<String>(kCurrenciesBox);
+  Hive.registerAdapter(CurrencyEntityAdapter());
+  Hive.registerAdapter(CurrencyInfoEntityAdapter());
+  await Hive.openBox<CurrencyEntity>(kCurrenciesBox);
 }

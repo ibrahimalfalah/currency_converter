@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/helpers/app_color.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/helpers/styles.dart';
+import '../../../domain/entity/currencies_entity.dart';
 import '../../logic/home_bloc.dart';
 import 'custom_cached_network_image.dart';
 import 'custom_drop_down.dart';
@@ -41,7 +42,7 @@ class HomeScreenBody extends StatelessWidget {
                 labelText: 'Enter Value Of Currency',
                 onChanged: null,
                 validator: (value) {
-                  if(value == null || value.isEmpty) {
+                  if (value == null || value.isEmpty) {
                     return 'required field';
                   }
                   return null;
@@ -63,41 +64,40 @@ class HomeScreenBody extends StatelessWidget {
                           current is SwapCurrencyState ||
                           current is ChangeCurrencyFromState,
                       builder: (context, state) {
-                        return CustomDropDown<String>(
-                          flagWidget: bloc.currencyFrom != ''
-                              ? CustomCachedNetworkImage(item: bloc.currencyFrom)
+                        return CustomDropDown<CurrencyInfoEntity>(
+                          flagWidget: bloc.currencyFrom != null
+                              ? CustomCachedNetworkImage(
+                                  item: bloc.currencyFrom!.id.toString())
                               : const Icon(Icons.flag_outlined),
                           hintText: 'from',
                           validator: (value) {
-                            if(value == null) {
+                            if (value == null) {
                               return 'required field';
                             }
                             return null;
                           },
                           onChanged: (value) {
                             if (value != null) {
-                              bloc.add(ChangeCurrencyFromEvent(
-                                  value: value.toString()));
+                              bloc.add(ChangeCurrencyFromEvent(value: value));
                             }
                           },
                           items: bloc.allCurrencies,
                           itemAsString: (value) {
-                            return value;
+                            return value.id;
                           },
                           filterFn: (text, filter) {
-                            if (text
-                                .toLowerCase()
-                                .contains(filter.toString().toLowerCase())) {
+                            if (text.currencyName.toLowerCase().contains(
+                                    filter.toString().toLowerCase()) ||
+                                text.id.toLowerCase().contains(
+                                    filter.toString().toLowerCase())) {
                               return true;
                             }
                             return false;
                           },
                           itemBuilder: (context, item, isSelected) {
-                            return DropDownItemBuilder(item: item);
+                            return DropDownItemBuilder(item: item.id);
                           },
-                          selectedItem: bloc.currencyFrom.isNotEmpty == true
-                              ? bloc.currencyFrom
-                              : null,
+                          selectedItem: bloc.currencyFrom,
                         );
                       },
                     ),
@@ -122,41 +122,40 @@ class HomeScreenBody extends StatelessWidget {
                           current is SwapCurrencyState ||
                           current is ChangeCurrencyToState,
                       builder: (context, state) {
-                        return CustomDropDown<String>(
-                          flagWidget: bloc.currencyTo != ''
-                              ? CustomCachedNetworkImage(item: bloc.currencyTo)
+                        return CustomDropDown<CurrencyInfoEntity>(
+                          flagWidget: bloc.currencyTo != null
+                              ? CustomCachedNetworkImage(
+                                  item: bloc.currencyTo!.id.toString())
                               : const Icon(Icons.flag_outlined),
                           hintText: 'to',
                           validator: (value) {
-                            if(value == null) {
+                            if (value == null) {
                               return 'required field';
                             }
                             return null;
                           },
                           onChanged: (value) {
                             if (value != null) {
-                              bloc.add(
-                                  ChangeCurrencyToEvent(value: value.toString()));
+                              bloc.add(ChangeCurrencyToEvent(value: value));
                             }
                           },
                           items: bloc.allCurrencies,
                           itemAsString: (value) {
-                            return value;
+                            return value.id;
                           },
                           filterFn: (text, filter) {
-                            if (text
-                                .toLowerCase()
-                                .contains(filter.toString().toLowerCase())) {
+                            if (text.currencyName.toLowerCase().contains(
+                                    filter.toString().toLowerCase()) ||
+                                text.id.toLowerCase().contains(
+                                    filter.toString().toLowerCase())) {
                               return true;
                             }
                             return false;
                           },
                           itemBuilder: (context, item, isSelected) {
-                            return DropDownItemBuilder(item: item);
+                            return DropDownItemBuilder(item: item.id);
                           },
-                          selectedItem: bloc.currencyTo.isNotEmpty == true
-                              ? bloc.currencyTo
-                              : null,
+                          selectedItem: bloc.currencyTo,
                         );
                       },
                     ),
@@ -205,7 +204,7 @@ class HomeScreenBody extends StatelessWidget {
                         width: double.infinity,
                         child: Padding(
                           padding: EdgeInsets.all(16.w),
-                          child: Text('Result: ${bloc.moneyConverting}',
+                          child: Text('Result: ${bloc.moneyConverting}${bloc.currencyTo?.currencySymbol}',
                               style: Styles.textStyle14
                                   .copyWith(fontWeight: FontWeight.bold)),
                         ),
