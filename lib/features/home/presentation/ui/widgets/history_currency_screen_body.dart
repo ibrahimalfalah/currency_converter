@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/helpers/setup_error_message.dart';
 import '../../logic/home_bloc.dart';
+import 'loading_shimmer_history.dart';
 
 class HistoryCurrencyScreenBody extends StatelessWidget {
   const HistoryCurrencyScreenBody({super.key});
@@ -23,6 +24,16 @@ class HistoryCurrencyScreenBody extends StatelessWidget {
         );
       },
       builder: (context, state) {
+        if(state is LoadingHistoryCurrencyState) {
+          return ListView.builder(
+            itemBuilder: (context, index) => const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: LoadingShimmerHistory(),
+            ),
+            itemCount: 2,
+            physics: const NeverScrollableScrollPhysics(),
+          );
+        }
         if (bloc.historyCurrencies?.currencies?.isNotEmpty == true) {
           return Padding(
             padding: const EdgeInsets.all(16.0),
