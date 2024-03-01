@@ -204,7 +204,7 @@ class HomeScreenBody extends StatelessWidget {
                         width: double.infinity,
                         child: Padding(
                           padding: EdgeInsets.all(16.w),
-                          child: Text('Result: ${bloc.moneyConverting}${bloc.currencyTo?.currencySymbol}',
+                          child: Text('Result: ${bloc.moneyConverting}${bloc.currencyTo?.currencySymbol ?? ''}',
                               style: Styles.textStyle14
                                   .copyWith(fontWeight: FontWeight.bold)),
                         ),

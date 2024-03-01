@@ -6,8 +6,7 @@ class AllCurrenciesModel extends CurrencyEntity {
   factory AllCurrenciesModel.fromJson(Map<String, dynamic> json) {
     var resultsMap = json['results'] as Map<String, dynamic>;
     var results = resultsMap.map(
-          (key, value) => MapEntry(
-        key,
+          (key, value) => MapEntry(key,
         CurrencyInfoEntity.fromJson(value as Map<String, dynamic>),
       ),
     );

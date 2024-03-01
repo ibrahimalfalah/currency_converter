@@ -2,13 +2,6 @@ import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'currencies_entity.g.dart';
 
-/*@HiveType(typeId:0)
-class CurrenciesEntity {
-  @HiveField(0)
-  List<String> ? currencyNames;
-  CurrenciesEntity({this.currencyNames});
-}*/
-
 @JsonSerializable()
 @HiveType(typeId:0)
 class CurrencyEntity {
